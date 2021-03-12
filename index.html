@@ -3,44 +3,64 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon application</title>
+    <title>Reservia</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-    <i class="fas fa-dog fa-2x"></i>
-    <i class="fas fa-money-bill-wave fa-2x"></i>
-    <i class="fas fa-child fa-2x"></i>
-    <i class="fas fa-heart fa-2x"></i>
-    <i class="fas fa-chart-line fa-2x"></i>
-         <i class="fas fa-star fa-2x"></i> 
-    <!-- Section 1 -->
-    <section id="sectionone"></section>
+    <!--Set one div for entire page in order to manage 
+      global prperties for page-->
+    <div id="entirepage">
+      <!--header section: contains logo + title and 
+      subtitle and main menu-->
+      <header>
+        <h1 id="essai" >HelloT</h1>
+      
+      </header>
+      <!--input for town search   + filter list 
+      + infos on number per town-->
+      <!-- QUESTION:
+      est ce que le choix du filtre est permanent ,
+       plusieurs choix?-->
+      <nav></nav>
+      <!--  Hebergements -->
+      <!--include : Title 
+      + photos and descriptions + Button "Afficher plus"-->
+      <!--QUESTION: faut t'il 
+        que le titre  change en fonction de la ville?-->
+      <section id="hebergements"></section>
 
-    <!-- Section 2 Description -->
-    <section id="description"></section>
+      <!-- Aside Populaires -->
+      <!--includes: Title + icon chart
+      + photos + descriptions on right-->
+      <aside id="populaires"></aside>
 
-    <!-- Section 3 Contenu mis en avant -->
-    <section id="featuredcontent"></section>
+      <!-- Section Activités -->
+      <!--Title + Photo+legend -->
+      <!--mise en page speciale en fonction portrait paysage-->
+      <section id="activites"></section>
 
-    <!-- Section 4 Details -->
-    <section id="details"></section>
-
-    <!-- Section 5 Big picture -->
-    <section id="bigpicture"></section>
-
-    <!-- Section 6 A propos -->
-    <section id="about"></section>
-
-    <!-- Section 7 Gammes de prix  -->
-    <section id="priceranges"></section>
-
-    <footer></footer>
+      <!--A propos + Nos Hebergements + Assistance-->
+      <footer></footer>
+    </div>
   </body>
 </html>
+<!--HERE SOME EXAMPLES OF IMPLEMANTATION USEFULL-->
+<!--icons-->
+<!-- <p>Entrepreneur, auteur et co-fondateur d'OpenClassrooms</p>
+      <i class="fas fa-dog fa-2x"></i>
+      <i class="fas fa-money-bill-wave fa-2x"></i>
+      <i class="fas fa-child fa-2x"></i>
+      <i class="fas fa-heart fa-2x"></i>
+      <i class="fas fa-chart-line fa-2x"></i>
+      <i class="fas fa-star fa-2x"></i> -->
