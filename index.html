@@ -24,34 +24,151 @@
       <!--header section: contains logo + title and 
       subtitle and main menu-->
       <header>
-        <h1 id="essai" >HelloT</h1>
-      
+        <div id="logo">
+          <img src="images/logo/Reservia.svg" alt="logo de zozor" />
+        </div>
+        <div id="menu">
+          <ul>
+            <li>Hébergements</li>
+            <li>Activités</li>
+          </ul>
+        </div>
+        <div id="inscription">S'incrire</div>
       </header>
+
       <!--input for town search   + filter list 
       + infos on number per town-->
       <!-- QUESTION:
       est ce que le choix du filtre est permanent ,
        plusieurs choix?-->
-      <nav></nav>
       <!--  Hebergements -->
       <!--include : Title 
       + photos and descriptions + Button "Afficher plus"-->
       <!--QUESTION: faut t'il 
         que le titre  change en fonction de la ville?-->
-      <section id="hebergements"></section>
-
-      <!-- Aside Populaires -->
-      <!--includes: Title + icon chart
-      + photos + descriptions on right-->
-      <aside id="populaires"></aside>
-
+      <section id="filtrage">
+        <h3>Trouvez votre Hébergement pour des vacances de rêve</h3>
+        <p>En plein centre ville ou en pleine nature</p>
+        <div id="choixville">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              maxlength="30"
+              placeholder="Marseille,france"
+            />
+            <label for="search">Rechercher</label>
+          </p>
+        </div>
+        <div id="filtres">
+          <h3>Filtres</h3>
+          <ul>
+            <li>
+              <i class="fas fa-money-bill-wave"></i>
+              <h3>Economique</h3>
+            </li>
+            <li>
+              <i class="fas fa-child"></i>
+              <h3>Familial</h3>
+            </li>
+            <li>
+              <i class="fas fa-heart"></i>
+              <h3>Romantique</h3>
+            </li>
+            <li>
+              <i class="fas fa-dog"></i>
+              <h3>Animaux autorisés</h3>
+            </li>
+          </ul>
+          <div id="filtre">
+            <i class="fas fa-info-circle"></i>
+            <i class="fas fa-info"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+          </div>
+        </div>
+      </section>
+      <section id="hebergements">
+        <div id="hebergementsville">
+          <div id="titrehebergements">
+            <h3>Hébergements à Marseille</h3>
+          </div>
+          <!--coder une liste avec un objet elementaire-->
+          <div id="listehebergements">
+            <div class="elementheber">
+              <div id="elementheberdesc">
+                Auberge La Cannebiére
+                <a href="#" class="boutonrouge"
+                  >Nuit à partir de <strong>25€</strong>
+                  <img
+                    src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="afficherplus"><h3>Afficher plus</h3></div>
+          <!-- Aside Populaires -->
+          <!--includes: Title + icon chart
+           + photos + descriptions on right-->
+          <aside id="populaires">
+            <div id="titrepopulaire">
+              <h3>Les plus populaires</h3>
+            </div>
+            <p id="logochart"><i class="fas fa-chart-line"></i></p>
+            <div class="listepopulaires">
+              <div class="photo"></div>
+              <div class="legende">
+                <div class="titreelement"></div>
+                <p>Nuit a partir de <strong></strong></p>
+                <div id="note"></div>
+              </div>
+            </div>
+          </aside>
+          <!--coder une liste avec un objet elementaire-->
+        </div>
+      </section>
       <!-- Section Activités -->
       <!--Title + Photo+legend -->
       <!--mise en page speciale en fonction portrait paysage-->
-      <section id="activites"></section>
+      <section id="activites">
+        <div id="titreactivites">
+          <h3>Activités à Marseille</h3>
+        </div>
+        <!--coder ici une liste avec des elements en portrait et en paysage-->
+        <ul id="listeactivite">
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
 
       <!--A propos + Nos Hebergements + Assistance-->
-      <footer></footer>
+      <footer>
+        <div id="apropos">
+          <h2>A propos</h2>
+          <ul>
+            <li><a href="#">Fonctionnement du site</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Données et confidentialité</a></li>
+          </ul>
+        </div>
+        <div id="nosinfos">
+          <h2>Nos hébergements</h2>
+          <ul>
+            <li><a href="#">Charte Qualité</a></li>
+            <li><a href="#">Soumettre votre hôtel</a></li>
+          </ul>
+        </div>
+        <div id="assistance">
+          <h2>Assitance</h2>
+          <ul>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
