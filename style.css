@@ -1,6 +1,8 @@
-/* body{
-    color:black;
-} */
+/* GENERAL DEFINITIONS BEGIN */
+/*
+definition of Releway Font:
+used kit generation of font squirrel site
+*/
 @font-face {
   font-family: "RalewayRegular";
   src: url("fonts/raleway.eot");
@@ -10,85 +12,148 @@
   font-weight: normal;
   font-style: normal;
 }
-/* properties of entire page : font*/
-/* QUESITON: avec ou sans Serif ?*/
+
+/* 
+properties of body : 
+font and backgound color to white
+definition of max-width for large screens*/
 body {
   font-family: "RalewayRegular", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
-  background-color: #FFFFFF;
-}
-#entirepage {
+  background-color: #ffffff;
   max-width: 1440px;
+}
+
+/* 
+entire page:  
+Left and right margin to fit the model
+*/
+#entirepage {
   margin-left: 50px;
   margin-right: 50px;
-  background-color: #FFFFFF;
-  /* border: 1px solid black */
 }
-/* header params */
-header {
-  border: 1px solid black;
+/*GENRAL DEFINITIONS END*/
+
+/* HEADER BEGIN */
+/* 
+header params : what so called menu is in fact 
+the entire content of the header: 
+logo + nav menu + incription nav
+placement of elements : flex aligned for 
+primary direction to space-betwwen
+implicit declaration of flow-direction to row
+secondary direction to center
+*/
+.menu {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  /* margin: 0px 50px 0px 50px */
 }
-header li{
-    list-style: none;
+
+/*
+header(menu) elements weight in flex units
+1 basis unit for logo 
+ */
+.logo {
+  flex: 1;
 }
-/* main params */
-main {
-  border: 1px solid black;
+/* 
+inscription nav:
+align text to the rigth
+use specifieied color
+flex unit width to 1
+*/
+.inscription {
+  text-align: right;
+  color: #0065fc;
+  flex: 1;
 }
-/* footer params */
-footer {
-  border: 1px solid black;
+
+/*navigation menu area
+flex width unit to 10 for large screens*/
+.nav {
+  flex: 10;
+}
+
+/*
+use of flex for menu pagination
+cancel style
+content goes to the flex end of box
+no margin to insure border effect on top of page
+padding top and bottom of 50px as the specification  
+*/
+.nav ul {
   display: flex;
-  justify-content: space-around;
- 
-}
-footer a{
-    text-decoration: none;
-
-}
-footer li{
-    list-style: none;
-    
+  list-style-type: none;
+  justify-content: flex-end;
+  margin: 0px;
+  padding: 50px 0px 50px 0px;
 }
 
+/*
+add margin to fit specification regarding 
+grid spacing beetween navigation elements
+*/
+.nav li {
+  margin-right: 25px;
+}
+
+/*
+navigation: 
+remove decoration
+padding for good placement of border
+indicating the mouse hover
+*/
+.nav a {
+  text-decoration: none;
+  padding: 47px 20px 0px 20px;
+}
+
+/*
+color for hover action
+add a top border when hover
+*/
+.nav a:hover {
+  color: #0065fc;
+  border-top: 3px solid #0065fc;
+}
+
+/* HEADER END */
+
+/* MAIN BEGIN */
+/* main {
+  border: 1px solid black;
+} */
 
 /* navigation  params */
-#logo {
+/* #logo {
   border: 1px solid blue;
 }
-#menu {
-  border: 1px solid blue;
-}
-#menu ul {
-  display: flex;
-  border: 1px solid blue;
-}
+
 #inscription {
   border: 1px solid blue;
-}
+} */
 
 /* #filtrage{
     border: 1px solid blue;
 } */
-#titrefiltrage{
-    border: 1px solid blue;
+/* #titrefiltrage {
+  border: 1px solid blue;
 }
-#choixville{
-    border: 1px solid blue;
-}
-#filtres, #filtres ul, #filtres ul li{
-    display:flex;
-    border: 1px solid blue;
+#choixville {
+  border: 1px solid blue;
+} */
+#filtres,
+#filtres ul,
+#filtres ul li {
+  display: flex;
+  /* border: 1px solid blue; */
 }
 /* #filtreinfos{
     border: 1px solid blue;
 } */
-
 
 /* hebergements  params */
 #hebergements {
@@ -97,103 +162,220 @@ footer li{
 }
 /* contient titrehebergements listehebergements afficherplus */
 #hebergementsville {
-    flex:2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #F2F2F2;
-    margin-right: 20px;
-    border-radius: 20px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  margin-right: 20px;
+  border-radius: 20px;
 }
 
 #populaires {
-    flex:1;
-    background-color: #F2F2F2;
-    margin-left: 20px;
-    border-radius: 20px;
+  flex: 1;
+  background-color: #f2f2f2;
+  margin-left: 20px;
+  border-radius: 20px;
 }
-#titrepopulaire{
-    display:flex;
-    justify-content: space-between;
-    /* margin: 15px; */
+#titrepopulaire {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 15px; */
 }
-#hebergementsville > div,#titrepopulaire, #listepopulaires{
-    margin:0px 40px 0px 40px;
+#hebergementsville > div,
+#titrepopulaire,
+#listepopulaires {
+  margin: 0px 40px 0px 40px;
 }
 
-.lpelement{
-    display:flex;
-    justify-content:left;
-    border: 1px solid black;
+.lpelement {
+  display: flex;
+  justify-content: left;
+  /* border: 1px solid black; */
 }
-.helement{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 250px;
-    border: 1px solid red;
-    /* max-height: 200px; */
-     position:relative; 
+.helement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 250px;
+  /* border: 1px solid red; */
+  /* max-height: 200px; */
+  position: relative;
 }
-.lpphoto{
-    border: 1px solid black;
+/* .lpphoto {
+  border: 1px solid black;
+} */
+.lpphoto img {
+  max-width: 135px;
 }
-.lpphoto img  {
-    max-width: 135px; 
+.hphoto img {
+  max-width: 100%;
 }
-.hphoto img  {
-    max-width:100%;
+/* .lplegende {
+  border: 1px solid black;
+} */
+.hlegende {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  background-color: rgba(255, 255, 255, 1);
+  padding-left: 10px;
+  position: absolute;
+  width: 95%;
+  bottom: -15px;
 }
-.lplegende{
-    border: 1px solid black;
-    
+#afficherplus {
+  padding-top: 50px;
 }
-.hlegende{
-    display:flex;
-    flex-direction: column;
-    border: 1px solid black;
-    background-color: rgba(255, 255, 255, 1);
-    padding-left:10px;
-    position: absolute; 
-    width:95%;
-    bottom: -15px;
+.hlegende p,
+h4,
+#lpnote {
+  line-height: 1.5em;
+  padding: 0px;
+  margin: 0px;
 }
-#afficherplus{
-    padding-top: 50px;
+i,
+#inscription {
+  color: #0065fc;
 }
-.hlegende p ,h4, #lpnote{
-    line-height: 1.5em;
-    padding: 0px;
-    margin: 0px;
+#lpnote .grey {
+  color: darkgrey;
 }
- i , #inscription{
-    color: #0065fc;
-  } 
- #lpnote .grey{
-    color:darkgrey;
-} 
-.fa-circle{
-    color:darkgrey;
-} 
-#greystar .fa-star
-{
-    color: black;
+.fa-circle {
+  color: darkgrey;
+}
+#greystar .fa-star {
+  color: black;
 }
 /* activités   params */
-#activites {
+/* #activites {
   border: 1px solid black;
-}
-h2,h3{
-    font-weight: bold;
-}
-/* icons  params */
-@media all and (max-width: 1200px)
-{
-    #hebergements {
-        flex-direction: column-reverse;
-    }
-    #hebergementsville, #populaires {
-        margin:0px
-    }
+} */
+h2,
+h3 {
+  font-weight: bold;
 }
 
+/*END MAIN*/
+
+/* BEGIN FOOTER */
+footer {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+  }
+  footer a {
+    text-decoration: none;
+  }
+  footer li {
+    list-style: none;
+  }
+/* END FOOTER*/
+
+/* RECURSIVE PARAMS BEGIN */
+
+/* mobiles breakpoint : 500px */
+@media all and (max-width: 500px) {
+
+  /* BEGIN BODY mobiles*/
+  /* 
+  redraw the page 
+  regarding width and margin:
+  no more margins
+  */
+  #entirepage {
+    width: auto;
+    margin: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  /* END BODY mobiles*/
+
+  /* BEGIN HEADER mobiles*/
+  /*
+  header(menu): 
+  wrap properties in order to allow flex 
+  to set element next line of primary direction*/
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  /*
+   logo and inscription: order must allow nav to go 
+   under logo and inscription field
+   slight change in padding to fit model
+  */
+  .logo,
+  .inscription {
+    order: -1;
+    padding-left: 10px;
+  }
+
+  /*
+  navigation list:
+  add padding to fit model grid
+  the list is justified left when 
+  mobile pagination
+  let placement in auto ? 
+  (to be tested in option) 
+  */
+  .nav ul {
+    padding: 20px 0px 20px 0px;
+    justify-content: left;
+    /* margin: auto;
+    width: auto; */
+  }
+
+  /* navigation: 
+   specific padding to fit specified spacing
+   when mobile grid
+  */
+  .nav a {
+    padding: 0px 35px 10px 35px;
+  }
+
+  /* navigation :
+   the border is now at the bottom
+   and no more at the top
+  */
+  .nav a:hover {
+    border-bottom: 3px solid #0065fc;
+    border-top: none;
+  }
+  /*END HEADER mobiles*/
+
+  /* BEGIN MAIN mobiles*/
+  #filtres,
+  #filtres ul,
+  #filtres ul li {
+    flex-direction: column;
+    /* border: 1px solid blue; */
+  }
+  /* END MAIN mobiles*/
+}
+
+/* Tablet and Ipad breakpoint */
+@media all and (max-width: 1024px) {
+  /* BEGIN BODY tablets*/
+  /* entire body:
+  auto the width and 
+  */
+  #entirepage {
+    width: auto;
+    margin: auto;
+  }
+  /* END BODY tablets*/
+
+  /* BEGIN HEADER tablets*/
+  /* END HEADER tablets*/
+
+  /* BEGIN MAIN tablets*/
+  #hebergements {
+    flex-direction: column-reverse;
+  }
+  #hebergementsville,
+  #populaires {
+    margin: 0px;
+  }
+  /* END MAIN tablets*/
+}

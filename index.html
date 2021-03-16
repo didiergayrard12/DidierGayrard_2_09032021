@@ -2,54 +2,55 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <!--viewport property for mobile devices width-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservia</title>
+    <!--font awesome link for get specified icons-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-      rel="stylesheet"
-    /> -->
+    <!--link to the style sheet-->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--Set one div for entire page in order to manage 
       global prperties for page-->
     <div id="entirepage">
-      <!--header section: contains logo + title and 
-      subtitle and main menu-->
-      <header id="tete">
-        <div id="logo">
-          <img src="images/logo/Reservia.svg" alt="logo de zozor" />
+      <!--BEGIN HEADER: contains logo + 
+        navigation and inscription link-->
+      <header>
+        <div class="menu">
+          <div class="logo">
+            <img src="images/logo/Reservia.svg" alt="Reservia logo" />
+          </div>
+          <div class="nav">
+            <ul>
+              <li><a href="#hebergements">Hébergements</a></li>
+              <li><a href="#activites">Activités</a></li>
+            </ul>
+          </div>
+          <div class="inscription">
+            <a href="#"><strong>S'incrire</strong></a>
+          </div>
         </div>
-        <nav id="menu">
-          <ul>
-            <li><h3>Hébergements</h3></li>
-            <li><h3>Activités</h3></li>
-          </ul>
-        </nav>
-        <div id="inscription"><strong>S'incrire</strong></div>
       </header>
+      <!--END HEADER-->
 
       <!--input for town search   + filter list 
       + infos on number per town-->
-      <!-- QUESTION:
-      est ce que le choix du filtre est permanent ,
-       plusieurs choix?-->
-      <!--  Hebergements -->
-      <!--include : Title 
-      + photos and descriptions + Button "Afficher plus"-->
-      <!--QUESTION: faut t'il 
-        que le titre  change en fonction de la ville?-->
+      <!--BEGIN MAIN: 
+      contains filtering + hebergemeents section + populaire aside 
+      + activite section 
+      -->
       <main>
+        <!--filtering section BEGIN-->
         <section id="filtrage">
           <h3>Trouvez votre Hébergement pour des vacances de rêve</h3>
           <p>En plein centre ville ou en pleine nature</p>
+          <!-- town choice div BEGIN-->
           <div id="choixville">
             <i class="fas fa-map-marker-alt"></i>
             <p>
@@ -63,6 +64,8 @@
               <label for="search">Rechercher</label>
             </p>
           </div>
+          <!-- town choice div END-->
+          <!-- filtering div BEGIN-->
           <div id="filtres">
             <h3>Filtres</h3>
             <ul>
@@ -83,10 +86,11 @@
                 <h3>Animaux autorisés</h3>
               </li>
             </ul>
-            
           </div>
+          <!-- filtering div END-->
+          <!--infos filtering div BEGIN-->
           <div id="filtreinfos">
-            <span class="fa-stack" style="vertical-align: top;">
+            <span class="fa-stack" style="vertical-align: top">
               <i class="far fa-circle fa-stack-2x"></i>
               <i class="fas fa-info fa-stack-1x"></i>
             </span>
@@ -94,77 +98,110 @@
               >Plus de 500 logements sont disponibles dans cette ville</data
             >
           </div>
+          <!--infos filtering div END-->
         </section>
+        <!--filtering section END-->
 
+        <!--hebergements section BEGIN-->
         <section id="hebergements">
+          <!--ville selection div BEGIN-->
           <div id="hebergementsville">
+            <!--town selection title BEGIN-->
             <div id="titrehebergements">
               <h3>Hébergements à Marseille</h3>
             </div>
+
             <!--coder une liste avec un objet elementaire-->
+            <!--town selection list div BEGIN-->
             <div id="listehebergements">
+              <!--hebergement element BEGIN-->
               <div class="helement">
+                <!--hebergement element photo BEGIN-->
                 <p class="hphoto">
-                  <a href="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg" 
-                  title="Auberge La Cannebiére" target="_blank" 
-                    ><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                     alt=""
+                  <a
+                    href="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                    title="Auberge La Cannebiére"
+                    target="_blank"
+                    ><img
+                      src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                      alt=""
                   /></a>
                 </p>
+                <!--hebergement element photo END-->
+
+                <!--hebergement element desc BEGIN-->
                 <div class="hlegende">
                   <h4>Auberge de la Cannebiere</h4>
                   <p>Nuit a partir de <strong>25€</strong></p>
-                  <div id="lpnote">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star "></i>
-                      <i class="fas fa-star "></i>
-                      <i class="fas fa-star grey"></i>
+                  <div id="hnote">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star grey"></i>
                   </div>
                 </div>
+                <!--hebergement element description END-->
               </div>
+              <!--hebergement element  END-->
             </div>
             <div id="afficherplus">
               <h3>Afficher plus</h3>
             </div>
           </div>
+          <!--town selection div BEGIN-->
           <!-- Aside Populaires -->
           <!--includes: Title + icon chart
            + photos + descriptions on right-->
+          <!--populaires  BEGIN-->
           <aside id="populaires">
             <div id="titrepopulaire">
               <h3>Les plus populaires</h3>
               <p id="logochart"><i class="fas fa-chart-line fa-2x"></i></p>
             </div>
-            
+            <!--populaires list BEGIN-->
             <div id="listepopulaires">
+              <!--populaires element BEGIN-->
               <div class="lpelement">
+                <!--populaires photo BEGIN-->
                 <div class="lpphoto">
-                  <a href="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg" 
-                  title="Au Coeur de l'eau" target="_blank" 
-                    ><img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
-                     alt=""
+                  <a
+                    href="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                    title="Au Coeur de l'eau"
+                    target="_blank"
+                    ><img
+                      src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                      alt=""
                   /></a>
                 </div>
+                <!--populaires photo END-->
+                <!--populaires description BEGIN-->
                 <div class="lplegende">
-                  <div class="titreelement"><strong>Au coeur de l'eau Chambres d'hôtes</Strong></div>
+                  <div class="titreelement">
+                    <strong>Au coeur de l'eau Chambres d'hôtes</strong>
+                  </div>
                   <p>Nuit a partir de <strong>128€</strong></p>
                   <div id="lpnote">
-                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
-                      <i class="fas fa-star "></i>
-                      <i class="fas fa-star "></i>
-                      <i class="fas fa-star grey"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star grey"></i>
                   </div>
                 </div>
+                <!--populaires description END-->
               </div>
-              
+              <!--populaires element END-->
             </div>
+            <!--populaires list END-->
           </aside>
           <!--coder une liste avec un objet elementaire-->
         </section>
+        <!--hebergements section END-->
+
         <!-- Section Activités -->
         <!--Title + Photo+legend -->
         <!--mise en page speciale en fonction portrait paysage-->
+        <!--activites section BEGIN-->
         <section id="activites">
           <div id="titreactivites">
             <h3>Activités à Marseille</h3>
@@ -175,8 +212,10 @@
             <li></li>
           </ul>
         </section>
+        <!--activites section END-->
       </main>
       <!--A propos + Nos Hebergements + Assistance-->
+      <!--FOOTER BEGIN-->
       <footer>
         <div id="apropos">
           <h3>A propos</h3>
@@ -201,6 +240,7 @@
           </ul>
         </div>
       </footer>
+      <!--FOOTER  END-->
     </div>
   </body>
 </html>
@@ -215,3 +255,15 @@
       <i class="fas fa-star fa-2x"></i> -->
 <!-- <p>Cette bombonne de 4m<sup>3</sup> contient du CO<sub>2</sub></p> -->
 <!-- <code><p>Cette bombonne de 4m<sup>3</sup> contient du CO<sub>2</sub></p></code> -->
+
+<!-- QUESTION:
+      est ce que le choix du filtre est permanent ,
+       plusieurs choix?-->
+<!--  Hebergements -->
+<!--include : Title 
+      + photos and descriptions + Button "Afficher plus"-->
+<!--QUESTION: faut t'il 
+        que le titre  change en fonction de la ville?-->
+
+<!--QUESTION: bootstrap ??? ou utilisation statique CSS HTML suffit?-->
+<!--QUESTION: date de soutenance au vu des avancées -->
