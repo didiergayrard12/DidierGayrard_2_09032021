@@ -33,6 +33,11 @@ Left and right margin to fit the model
   margin-left: 50px;
   margin-right: 50px;
 }
+/* h2,
+h3 {
+  font-weight: bold;
+} */
+
 /*GENRAL DEFINITIONS END*/
 
 /* HEADER BEGIN */
@@ -66,7 +71,7 @@ use specifieied color
 flex unit width to 1
 */
 .inscription {
-  text-align: right;
+  /* text-align: right; */
   color: #0065fc;
   flex: 1;
 }
@@ -136,39 +141,107 @@ add a top border when hover
   border: 1px solid blue;
 } */
 
-/* #filtrage{
-    border: 1px solid blue;
-} */
+#filtrage {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin:auto;
+}
+
 /* #titrefiltrage {
   border: 1px solid blue;
-}
+}*/
 #choixville {
-  border: 1px solid blue;
-} */
-#filtres,
-#filtres ul,
-#filtres ul li {
   display: flex;
-  /* border: 1px solid blue; */
+  align-items: center;
+  /* max-width: 480px; */
+  margin: 0px 0px 30px 0px;
 }
-/* #filtreinfos{
-    border: 1px solid blue;
-} */
+#choixville #inputville {
+  font-family: "RalewayRegular", sans-serif;
+  margin: 0px;
+}
+#choixville #iconchoix {
+  padding: 20px 25px 20px 20px;
+  background-color: #F2F2F2;
+  border-radius: 15px 0px 0px 15px ;
+  text-justify: center;
+  font-size: 1.5em;
+  margin: 0px;
+}
+#choixville #labelfield {
+  padding: 23px;
+  font-size: 20px;
+  font-weight: bolder;
+  background-color:#0065fc;
+  border-radius: 0px 15px 15px 0px ;
+  color:white;
+  margin: 0px;
+}
 
+input[type="text"] {
+  font-size: 16px;
+  padding:25px;
+  font-weight: bold;
+  border: 1px solid #F2F2F2;
+}
+#filtres {
+  margin: 0px 0px 30px 0px;
+}
+#filtres,
+#filtres ul {
+  display: flex;
+  align-items: center;
+ 
+  
+}
+
+#filtres li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  border: 2px solid #DEEBFF;
+  border-radius: 40px;
+  margin:10px;
+}
+#filtreinfos {
+  display: flex;
+  border: 1px solid blue;
+  align-items: center;
+}
+h3,
+h2,
+#logochart {
+  padding: 0px;
+  margin: 0px;
+}
+
+.icon-background{
+color:#DEEBFF;
+}
+
+/* .fa-child{
+  padding: 12px 18px 12px 18px;
+  background-color: #DEEBFF ;
+  border-radius: 25px;
+} */
 /* hebergements  params */
 #hebergements {
   display: flex;
-  margin-top: 25px;
+  margin: 30px 0px 30px 0px;
+  border: 1px solid black;
 }
 /* contient titrehebergements listehebergements afficherplus */
 #hebergementsville {
   flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #f2f2f2;
   margin-right: 20px;
   border-radius: 20px;
+  border: 1px solid red;
 }
 
 #populaires {
@@ -180,28 +253,123 @@ add a top border when hover
 #titrepopulaire {
   display: flex;
   justify-content: space-between;
-  /* margin: 15px; */
-}
-#hebergementsville > div,
-#titrepopulaire,
-#listepopulaires {
-  margin: 0px 40px 0px 40px;
+  align-items: center;
+  border: 1px solid red;
+  margin: 40px 40px 25px 35px;
 }
 
-.lpelement {
+#listehebergements {
   display: flex;
-  justify-content: left;
-  /* border: 1px solid black; */
+  /* margin:auto; */
+  border: 1px solid red;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 420px;
+  margin: 0px 20px 0px 20px;
+}
+#afficherplus {
+  border: 1px solid red;
+  margin: 35px 40px 40px 40px;
+}
+#titrehebergements {
+  margin: 40px 40px 25px 40px;
+  border: 1px solid red;
 }
 .helement {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 250px;
+  width: 240px;
+  height: 200px;
+  text-align: center;
+  background-color: khaki;
   /* border: 1px solid red; */
   /* max-height: 200px; */
+  margin: 12px 12px 12px 12px;
   position: relative;
 }
+#listepopulaires {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 500px;
+  border: 1px solid black;
+  margin: 0px 40px 40px 40px;
+}
+.lpelement {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  width: 345px;
+  height: 140px;
+  background-color: khaki;
+  /* border: 1px solid black; */
+}
+
+/* ACTIVITES BEGIN */
+#titreactivites {
+  border: 1px solid black;
+  margin: 25px 0px 25px 0px;
+}
+#listeactivites {
+  display: flex;
+  justify-content: flex-start;
+  /* border: 1px solid black;  */
+  margin: 0px 0px 40px 0px;
+}
+
+.actblock {
+  display: flex;
+  justify-content: flex-start;
+  /* border: 1px solid black;  */
+}
+/* .actblock:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+ 
+} */
+
+.aporelement {
+  /* border: 1px solid red; */
+  min-height: 440px;
+  width: 300px;
+  background-color: lightblue;
+}
+.actblock:nth-child(1) .aporelement {
+  border: 1px solid red;
+  margin-right: 40px;
+}
+.actblock:nth-child(2) .aporelement {
+  border: 1px solid red;
+  margin: 0px 40px 0px 40px;
+}
+
+.apayelement div {
+  border: 1px solid black;
+  /* margin-left: 35px; */
+  min-height: 160px;
+  width: 300px;
+  background-color: khaki;
+}
+/* .apayelement:nth-child(2)
+{
+  border: 1px solid black;
+  margin-left: 35px;
+  min-height: 160px;
+} */
+.apayelement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  /* background-color: khaki; */
+  /* margin: 0px 0px 0px 0px; */
+}
+#listeactivites a {
+  text-decoration: none;
+}
+
 /* .lpphoto {
   border: 1px solid black;
 } */
@@ -209,6 +377,9 @@ add a top border when hover
   max-width: 135px;
 }
 .hphoto img {
+  max-width: 100%;
+}
+.photo img {
   max-width: 100%;
 }
 /* .lplegende {
@@ -224,9 +395,9 @@ add a top border when hover
   width: 95%;
   bottom: -15px;
 }
-#afficherplus {
+/* #afficherplus {
   padding-top: 50px;
-}
+} */
 .hlegende p,
 h4,
 #lpnote {
@@ -241,42 +412,35 @@ i,
 #lpnote .grey {
   color: darkgrey;
 }
-.fa-circle {
-  color: darkgrey;
+.icon-background2 {
+  color: #F2F2F2;
 }
 #greystar .fa-star {
   color: black;
-}
-/* activités   params */
-/* #activites {
-  border: 1px solid black;
-} */
-h2,
-h3 {
-  font-weight: bold;
 }
 
 /*END MAIN*/
 
 /* BEGIN FOOTER */
 footer {
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: space-around;
-  }
-  footer a {
-    text-decoration: none;
-  }
-  footer li {
-    list-style: none;
-  }
+  border: 1px solid black;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: flex-start;
+}
+footer div {
+  margin: 50px 200px 50px 50px;
+}
+footer a {
+  text-decoration: none;
+}
+
 /* END FOOTER*/
 
 /* RECURSIVE PARAMS BEGIN */
 
 /* mobiles breakpoint : 500px */
 @media all and (max-width: 500px) {
-
   /* BEGIN BODY mobiles*/
   /* 
   redraw the page 

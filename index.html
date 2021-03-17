@@ -48,21 +48,21 @@
       <main>
         <!--filtering section BEGIN-->
         <section id="filtrage">
-          <h3>Trouvez votre Hébergement pour des vacances de rêve</h3>
+          <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
           <p>En plein centre ville ou en pleine nature</p>
           <!-- town choice div BEGIN-->
           <div id="choixville">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>
+            <p id="iconchoix"><i class="fas fa-map-marker-alt"></i></p>
+            <p id="inputville">
               <input
                 type="text"
                 name="search"
                 id="search"
-                maxlength="30"
-                placeholder="Marseille,france"
+                maxlength="40"
+                value="Marseille,france"
               />
-              <label for="search">Rechercher</label>
             </p>
+            <p id="labelfield">Rechercher</p>
           </div>
           <!-- town choice div END-->
           <!-- filtering div BEGIN-->
@@ -70,19 +70,31 @@
             <h3>Filtres</h3>
             <ul>
               <li>
-                <i class="fas fa-money-bill-wave"></i>
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                  <i class="fa fa-money-bill-wave fa-stack-1x"></i>
+                </span>
                 <h3>Economique</h3>
               </li>
               <li>
-                <i class="fas fa-child"></i>
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                  <i class="fa fa-child fa-stack-1x"></i>
+                  </span>
                 <h3>Familial</h3>
               </li>
               <li>
-                <i class="fas fa-heart"></i>
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                  <i class="fa  fa-heart fa-stack-1x"></i>
+                  </span>
                 <h3>Romantique</h3>
               </li>
               <li>
-                <i class="fas fa-dog"></i>
+                <span class="fa-stack fa-2x">
+                  <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                  <i class="fa fa-dog fa-stack-1x"></i>
+                </span>
                 <h3>Animaux autorisés</h3>
               </li>
             </ul>
@@ -91,7 +103,7 @@
           <!--infos filtering div BEGIN-->
           <div id="filtreinfos">
             <span class="fa-stack" style="vertical-align: top">
-              <i class="far fa-circle fa-stack-2x"></i>
+              <i class="far fa-circle fa-stack-2x icon-background2"></i>
               <i class="fas fa-info fa-stack-1x"></i>
             </span>
             <data value="500"
@@ -108,7 +120,7 @@
           <div id="hebergementsville">
             <!--town selection title BEGIN-->
             <div id="titrehebergements">
-              <h3>Hébergements à Marseille</h3>
+              <h2>Hébergements à Marseille</h2>
             </div>
 
             <!--coder une liste avec un objet elementaire-->
@@ -116,21 +128,14 @@
             <div id="listehebergements">
               <!--hebergement element BEGIN-->
               <div class="helement">
+                Element 1
                 <!--hebergement element photo BEGIN-->
-                <p class="hphoto">
-                  <a
-                    href="images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                    title="Auberge La Cannebiére"
-                    target="_blank"
-                    ><img
-                      src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-                      alt=""
-                  /></a>
-                </p>
+                <!-- <p class="photo">
+                  <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt=""/></a>
+                </p> -->
                 <!--hebergement element photo END-->
-
                 <!--hebergement element desc BEGIN-->
-                <div class="hlegende">
+                <!-- <div class="hlegende">
                   <h4>Auberge de la Cannebiere</h4>
                   <p>Nuit a partir de <strong>25€</strong></p>
                   <div id="hnote">
@@ -140,9 +145,14 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star grey"></i>
                   </div>
-                </div>
+                </div> -->
                 <!--hebergement element description END-->
               </div>
+              <div class="helement">Element 2</div>
+              <div class="helement">Element 3</div>
+              <div class="helement">Element 4</div>
+              <div class="helement">Element 5</div>
+              <div class="helement">Element 6</div>
               <!--hebergement element  END-->
             </div>
             <div id="afficherplus">
@@ -156,27 +166,20 @@
           <!--populaires  BEGIN-->
           <aside id="populaires">
             <div id="titrepopulaire">
-              <h3>Les plus populaires</h3>
+              <h2>Les plus populaires</h2>
               <p id="logochart"><i class="fas fa-chart-line fa-2x"></i></p>
             </div>
             <!--populaires list BEGIN-->
             <div id="listepopulaires">
               <!--populaires element BEGIN-->
               <div class="lpelement">
+                Element 1
+
                 <!--populaires photo BEGIN-->
-                <div class="lpphoto">
-                  <a
-                    href="images/hebergements/2_large/aw-creative-VGs8z60yT2c-unsplash.jpg"
-                    title="Au Coeur de l'eau"
-                    target="_blank"
-                    ><img
-                      src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
-                      alt=""
-                  /></a>
-                </div>
+                <!-- <div class="photo"><a href="#"><img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt=""/></a></div> -->
                 <!--populaires photo END-->
                 <!--populaires description BEGIN-->
-                <div class="lplegende">
+                <!-- <div class="lplegende">
                   <div class="titreelement">
                     <strong>Au coeur de l'eau Chambres d'hôtes</strong>
                   </div>
@@ -187,9 +190,11 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star grey"></i>
                   </div>
-                </div>
+                </div> -->
                 <!--populaires description END-->
               </div>
+              <div class="lpelement">Element 2</div>
+              <div class="lpelement">Element 3</div>
               <!--populaires element END-->
             </div>
             <!--populaires list END-->
@@ -204,44 +209,52 @@
         <!--activites section BEGIN-->
         <section id="activites">
           <div id="titreactivites">
-            <h3>Activités à Marseille</h3>
+            <h2>Activités à Marseille</h2>
           </div>
-          <!--coder ici une liste avec des elements en portrait et en paysage-->
-          <ul id="listeactivite">
-            <li></li>
-            <li></li>
-          </ul>
+          <div id="listeactivites">
+            <!--coder ici une liste avec des elements en portrait et en paysage-->
+            <div class="actblock">
+              <div class="aporelement"><a href="#">Element A 1</a></div>
+              <div class="apayelement">
+                <div><a href="#">Element A 2</a></div>
+                <div><a href="#">Element A 3</a></div>
+              </div>
+            </div>
+            <div class="actblock">
+              <div class="aporelement"><a href="#">Element A 4</a></div>
+              <div class="apayelement">
+                <div><a href="#">Element A 5</a></div>
+                <div><a href="#">Element A 6</a></div>
+              </div>
+            </div>
+          </div>
         </section>
         <!--activites section END-->
       </main>
-      <!--A propos + Nos Hebergements + Assistance-->
-      <!--FOOTER BEGIN-->
-      <footer>
-        <div id="apropos">
-          <h3>A propos</h3>
-          <ul>
-            <li><a href="#">Fonctionnement du site</a></li>
-            <li><a href="#">Conditions générales de vente</a></li>
-            <li><a href="#">Données et confidentialité</a></li>
-          </ul>
-        </div>
-        <div id="nosinfos">
-          <h3>Nos hébergements</h3>
-          <ul>
-            <li><a href="#">Charte Qualité</a></li>
-            <li><a href="#">Soumettre votre hôtel</a></li>
-          </ul>
-        </div>
-        <div id="assistance">
-          <h3>Assitance</h3>
-          <ul>
-            <li><a href="#">Centre d'aide</a></li>
-            <li><a href="#">Nous contacter</a></li>
-          </ul>
-        </div>
-      </footer>
-      <!--FOOTER  END-->
+     
+     
     </div>
+     <!--A propos + Nos Hebergements + Assistance-->
+     <!--FOOTER BEGIN-->
+     <footer>
+      <div id="apropos">
+        <h3>A propos</h3>
+          <p><a href="#">Fonctionnement du site</a></p>
+          <p><a href="#">Conditions générales de vente</a></p>
+          <p><a href="#">Données et confidentialité</a></p>
+      </div>
+      <div id="nosinfos">
+        <h3>Nos hébergements</h3>
+          <p><a href="#">Charte Qualité</a></p>
+          <p><a href="#">Soumettre votre hôtel</a></p>
+      </div>
+      <div id="assistance">
+        <h3>Assitance</h3>
+          <p><a href="#">Centre d'aide</a></p>
+          <p><a href="#">Nous contacter</a></p>
+      </div>
+    </footer>
+    <!--FOOTER  END-->
   </body>
 </html>
 <!--HERE SOME EXAMPLES OF IMPLEMANTATION USEFULL-->
@@ -253,6 +266,7 @@
       <i class="fas fa-heart fa-2x"></i>
       <i class="fas fa-chart-line fa-2x"></i>
       <i class="fas fa-star fa-2x"></i> -->
+<!--<i class="fas fa-search"></i> -->
 <!-- <p>Cette bombonne de 4m<sup>3</sup> contient du CO<sub>2</sub></p> -->
 <!-- <code><p>Cette bombonne de 4m<sup>3</sup> contient du CO<sub>2</sub></p></code> -->
 
