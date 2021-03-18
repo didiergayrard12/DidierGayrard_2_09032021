@@ -48,7 +48,7 @@
       <main>
         <!--filtering section BEGIN-->
         <section id="filtrage">
-          <h3>Trouvez votre hébergement pour des vacances de rêve</h3>
+          <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
           <p>En plein centre ville ou en pleine nature</p>
           <!-- town choice div BEGIN-->
           <div id="choixville">
@@ -63,6 +63,11 @@
               />
             </p>
             <p id="labelfield">Rechercher</p>
+            <!-- <p id="loopfield"> <span class="fa-stack fa-2x">
+              <i class="fa fa-square fa-stack-2x icon-background3"></i>
+              <i class="fa fa-search fa-stack-1x"></i>
+            </span></p> -->
+            <p><i class="fa fa-search"></i></p>
           </div>
           <!-- town choice div END-->
           <!-- filtering div BEGIN-->
@@ -74,20 +79,20 @@
                   <i class="fa fa-circle fa-stack-2x icon-background"></i>
                   <i class="fa fa-money-bill-wave fa-stack-1x"></i>
                 </span>
-                <h3>Economique</h3>
+                <h3>Économique</h3>
               </li>
               <li>
                 <span class="fa-stack fa-2x">
                   <i class="fa fa-circle fa-stack-2x icon-background"></i>
                   <i class="fa fa-child fa-stack-1x"></i>
-                  </span>
+                </span>
                 <h3>Familial</h3>
               </li>
               <li>
                 <span class="fa-stack fa-2x">
                   <i class="fa fa-circle fa-stack-2x icon-background"></i>
-                  <i class="fa  fa-heart fa-stack-1x"></i>
-                  </span>
+                  <i class="fa fa-heart fa-stack-1x"></i>
+                </span>
                 <h3>Romantique</h3>
               </li>
               <li>
@@ -128,7 +133,13 @@
             <div id="listehebergements">
               <!--hebergement element BEGIN-->
               <div class="helement">
-                Element 1
+                <p class="hphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
                 <!--hebergement element photo BEGIN-->
                 <!-- <p class="photo">
                   <a href="#"><img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt=""/></a>
@@ -148,11 +159,51 @@
                 </div> -->
                 <!--hebergement element description END-->
               </div>
-              <div class="helement">Element 2</div>
-              <div class="helement">Element 3</div>
-              <div class="helement">Element 4</div>
-              <div class="helement">Element 5</div>
-              <div class="helement">Element 6</div>
+              <div class="helement">
+                <p class="hphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
+              <div class="helement">
+                <p class="hphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
+              <div class="helement">
+                <p class="hphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/1_xlarge/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
+              <div class="helement">
+                <p class="hphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
+              <div class="helement">
+                <p class="hphotopor">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
               <!--hebergement element  END-->
             </div>
             <div id="afficherplus">
@@ -173,7 +224,13 @@
             <div id="listepopulaires">
               <!--populaires element BEGIN-->
               <div class="lpelement">
-                Element 1
+                <p class="lpphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
 
                 <!--populaires photo BEGIN-->
                 <!-- <div class="photo"><a href="#"><img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt=""/></a></div> -->
@@ -193,8 +250,24 @@
                 </div> -->
                 <!--populaires description END-->
               </div>
-              <div class="lpelement">Element 2</div>
-              <div class="lpelement">Element 3</div>
+              <div class="lpelement">
+                <p class="lpphoto">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
+              <div class="lpelement">
+                <p class="lpphotopor">
+                  <a href="#"
+                    ><img
+                      src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+              </div>
               <!--populaires element END-->
             </div>
             <!--populaires list END-->
@@ -214,44 +287,96 @@
           <div id="listeactivites">
             <!--coder ici une liste avec des elements en portrait et en paysage-->
             <div class="actblock">
-              <div class="aporelement"><a href="#">Element A 1</a></div>
+              <div class="aporelement">
+                <p class="aphoto">
+                  <a href="#"
+                    ><img
+                      src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+                <h4>Vieux Port</h4>
+              </div>
               <div class="apayelement">
-                <div><a href="#">Element A 2</a></div>
-                <div><a href="#">Element A 3</a></div>
+                <div>
+                  <p class="aphoto">
+                    <a href="#"
+                      ><img
+                        src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg"
+                        alt=""
+                    /></a>
+                  </p>
+                  <h4>Fort de Pomégues</h4>
+                </div>
+                <div>
+                  <p class="aphoto">
+                    <a href="#"
+                      ><img
+                        src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"
+                        alt=""
+                    /></a>
+                  </p>
+                  <h4>Îles du Frioul</h4>
+                </div>
               </div>
             </div>
             <div class="actblock">
-              <div class="aporelement"><a href="#">Element A 4</a></div>
+              <div class="aporelement">
+                <p class="aphoto">
+                  <a href="#"
+                    ><img
+                      src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"
+                      alt=""
+                  /></a>
+                </p>
+                <h4>Parc national des Calanques</h4>
+              </div>
               <div class="apayelement">
-                <div><a href="#">Element A 5</a></div>
-                <div><a href="#">Element A 6</a></div>
+                <div>
+                  <p class="aphoto">
+                    <a href="#"
+                      ><img
+                        src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
+                        alt=""
+                    /></a>
+                  </p>
+                  <h4>Notre-Dame-de-la-Garde</h4>
+                </div>
+                <div>
+                  <p class="aphoto">
+                    <a href="#"
+                      ><img
+                        src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg"
+                        alt=""
+                    /></a>
+                  </p>
+                  <h4>Parc Longchamps</h4>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <!--activites section END-->
       </main>
-     
-     
     </div>
-     <!--A propos + Nos Hebergements + Assistance-->
-     <!--FOOTER BEGIN-->
-     <footer>
-      <div id="apropos">
+    <!--A propos + Nos Hebergements + Assistance-->
+    <!--FOOTER BEGIN-->
+    <footer>
+      <div class="foot">
         <h3>A propos</h3>
-          <p><a href="#">Fonctionnement du site</a></p>
-          <p><a href="#">Conditions générales de vente</a></p>
-          <p><a href="#">Données et confidentialité</a></p>
+        <p><a href="#">Fonctionnement du site</a></p>
+        <p><a href="#">Conditions générales de vente</a></p>
+        <p><a href="#">Données et confidentialité</a></p>
       </div>
-      <div id="nosinfos">
+      <div class="foot">
         <h3>Nos hébergements</h3>
-          <p><a href="#">Charte Qualité</a></p>
-          <p><a href="#">Soumettre votre hôtel</a></p>
+        <p><a href="#">Charte Qualité</a></p>
+        <p><a href="#">Soumettre votre hôtel</a></p>
       </div>
-      <div id="assistance">
+      <div class="foot">
         <h3>Assitance</h3>
-          <p><a href="#">Centre d'aide</a></p>
-          <p><a href="#">Nous contacter</a></p>
+        <p><a href="#">Centre d'aide</a></p>
+        <p><a href="#">Nous contacter</a></p>
       </div>
     </footer>
     <!--FOOTER  END-->
