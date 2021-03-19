@@ -317,7 +317,7 @@ h2,
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px; */
 }
-.hlegende div, #lpnote{
+.hlegende div, .lpnote{
   /* border: 1px solid black; */
   padding: 5px 0px 0px 0px;
   font-size: 0.8em;
@@ -341,7 +341,7 @@ h2,
   padding-top: 50px;
 } */
 h4,
-#lpnote {
+.lpnote {
   padding: 0px;
   margin: 0px;
 }
@@ -438,7 +438,7 @@ h4,
 .actblock {
   display: flex;
   justify-content:space-around;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0px 0px 25px 0px;
 }
 
@@ -523,9 +523,6 @@ i,
 #inscription {
   color: #0065fc;
 }
-#lpnote .grey {
-  color: darkgrey;
-}
 .icon-background2 {
   color: #f2f2f2;
 }
@@ -589,7 +586,7 @@ footer a {
   .logo,
   .inscription {
     order: -1;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   .inscription {
     /* padding-left: 180px; */
@@ -655,11 +652,11 @@ footer a {
     margin: 0px;
   }
   .helement{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     min-width: 320px;
   }
   .lpelement{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 320px;
   }
   .lplegende{
@@ -702,16 +699,16 @@ footer a {
     
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     
   }
 
   .aporelement .aphoto , .apayelement .aphoto{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 340px;
   }
    .apayelement .aphoto img{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 340px;
   }
   .actblock:nth-child(1) .aporelement {
@@ -720,7 +717,7 @@ footer a {
   }
   .actblock:nth-child(2) .aporelement {
     margin: 0px 0px 20px 0px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height:180px;
   }
   .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto{
@@ -751,7 +748,7 @@ footer a {
  
   /* END MAIN mobiles*/
   footer {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex-direction: column;
     align-items: baseline;
     margin: 0px;
@@ -786,11 +783,9 @@ footer a {
    margin: auto; 
     /* flex: 1; */
   }
-  #titrepopulaire {
-    /* margin: 40px 20px 25px 20px; */
-  }
+  
   #listehebergements {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     justify-content: center;
     align-items: center;
   }
@@ -798,7 +793,7 @@ footer a {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-items: center;
     /* margin:auto; */
     margin: 0px 0px 0px 0px;
@@ -833,14 +828,14 @@ padding: 10px 10px 10px 10px;
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
        
   }
 
   .actblock {
     justify-content: flex-start;
     margin: 50px 0px 0px 0px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   /* .actblock:nth-child(1) .aporelement {
