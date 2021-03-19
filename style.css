@@ -136,6 +136,7 @@ add a top border when hover
   margin: auto;
 }
 
+
 #choixville {
   display: flex;
   align-items: center;
@@ -273,17 +274,20 @@ h2,
   text-align: center;
   border: 5px solid white;
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
   margin: 12px 12px 12px 12px;
 }
 .hphoto,
 .hphotopor {
   overflow: hidden;
   position: relative;
+  /* border: 1px solid black;   */
   width: 240px;
-  height: 120px;
+  /* height: 120px; */
+  flex:3;
   margin: 0px;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 .hphoto img {
   width: 240px;
@@ -297,11 +301,46 @@ h2,
   top: -120px;
   right: 0px;
 }
+.hlegende{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
+   /* border: 1px solid black;   */
+   padding: 10px 10px 10px 10px;
+  /* margin: 0px 0px 10px 0px;  */
+  text-align: left;
+  flex:1;
+  /* border: 5px solid white;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 25px; */
+}
+.hlegende div, #lpnote{
+  /* border: 1px solid black; */
+  padding: 5px 0px 0px 0px;
+  font-size: 0.8em;
+}
 .helement:nth-child(5) img {
   top: 0px;
 }
 .helement:nth-child(4) img {
   top: -50px;
+}
+/* .ilegende {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+  padding-left: 10px;
+  position: absolute;
+  width: 95%;
+  bottom: -15px;
+} */
+/* #afficherplus {
+  padding-top: 50px;
+} */
+h4,
+#lpnote {
+  padding: 0px;
+  margin: 0px;
 }
 #listepopulaires {
   display: flex;
@@ -312,22 +351,28 @@ h2,
 }
 .lpelement {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   text-align: center;
-  width: 345px;
+  align-items: center;
+  width: 340px;
   height: 140px;
   border: 5px solid white;
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+
 }
+
 .lpphoto,
 .lpphotopor {
   position: relative;
   overflow: hidden;
+  /* border: 1px solid black; */
   height: 140px;
   width: 130px;
+  flex:1;
   margin: 0px;
-  border-radius: 25px 0px 0px 25px;
+  border-radius: 15px 0px 0px 15px;
 }
 
 .lpphoto img {
@@ -342,6 +387,38 @@ h2,
   top: -30px;
   right: 0px;
 }
+/* .lpphoto {
+  border: 1px solid black;
+} */
+
+.lplegende{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   /* border: 1px solid black;  */
+   padding: 10px 40px 10px 20px;
+  /* margin: 0px 0px 10px 0px;  */
+  text-align: left;
+  flex:1.7;
+  /* border: 5px solid white;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 25px; */
+}
+.titreelement{
+  /* border: 1px solid black; */
+  margin: 0px 0px -5px 0px;
+  padding:0px;
+  line-height: 1em;
+}
+.lplegende p{
+  /* border: 1px solid black; */
+  font-size: 0.8em;
+  line-height: 1em;
+}
+.icon-color-less{
+  color: #f2f2f2;
+}
+/*POPULAIRES END*/
 
 /* ACTIVITES BEGIN */
 #titreactivites {
@@ -355,17 +432,16 @@ h2,
 
 .actblock {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
 }
 
-.apayelement {
+.apayelement{
   display: flex;
   flex-direction: column;
   width: 300px;
 }
-.aporelement,
-.apayelement div {
-  display: flex;
+.aporelement,.apayelement div {
+  display:flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -377,7 +453,7 @@ h2,
 
 /* this is the viewport for img*/
 .aporelement .aphoto {
-  overflow: hidden;
+   overflow: hidden; 
   position: relative;
   margin: 0px;
   width: 300px;
@@ -385,18 +461,18 @@ h2,
   border-radius: 25px 25px 0px 0px;
 }
 .apayelement .aphoto {
-  overflow: hidden;
-  position: relative;
-  margin: 0px;
-  width: 300px;
-  border-radius: 25px 25px 0px 0px;
+  overflow: hidden; 
+ position: relative;
+ margin: 0px;
+ width: 300px;
+ border-radius: 25px 25px 0px 0px;
 }
 .aporelement .aphoto img {
   height: 440px;
   position: absolute;
-  top: 0px;
+  top:0px;
   right: -180px;
-}
+} 
 
 .actblock:nth-child(1) .aporelement {
   margin: 0px 40px 0px 0px;
@@ -406,63 +482,35 @@ h2,
   margin: 0px 40px 0px 40px;
   height: 440px;
 }
-.apayelement div:nth-child(1) {
+.apayelement div:nth-child(1){
   margin-bottom: 40px;
 }
 
-#listeactivites h4 {
-  margin: 10px 20px 10px 20px;
+#listeactivites h4{
+  margin:10px 20px 10px 20px;
 }
-.actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto {
+.actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto{
   height: 180px;
 }
-.actblock:nth-child(1) .apayelement div:nth-child(2) .aphoto {
+.actblock:nth-child(1) .apayelement div:nth-child(2) .aphoto{
   height: 120px;
 }
-.actblock:nth-child(2) .apayelement div:nth-child(1) .aphoto {
+.actblock:nth-child(2) .apayelement div:nth-child(1) .aphoto{
   height: 140px;
 }
-.actblock:nth-child(2) .apayelement div:nth-child(2) .aphoto {
+.actblock:nth-child(2) .apayelement div:nth-child(2) .aphoto{
   height: 150px;
 }
-.apayelement .aphoto img {
+.apayelement .aphoto img{
   width: 300px;
   position: absolute;
 }
-.actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto img {
+.actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto img{
   top: -100px;
 }
 
 #listeactivites a {
   text-decoration: none;
-}
-
-/* .lpphoto {
-  border: 1px solid black;
-} */
-
-/* .lplegende {
-  border: 1px solid black;
-} */
-.hlegende {
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid black; */
-  background-color: rgba(255, 255, 255, 1);
-  padding-left: 10px;
-  position: absolute;
-  width: 95%;
-  bottom: -15px;
-}
-/* #afficherplus {
-  padding-top: 50px;
-} */
-.hlegende p,
-h4,
-#lpnote {
-  line-height: 1.5em;
-  padding: 0px;
-  margin: 0px;
 }
 i,
 #inscription {
@@ -521,8 +569,8 @@ footer a {
   to set element next line of primary direction*/
   .menu {
     flex-wrap: wrap;
-    border: 1px solid black;
     justify-content: flex-end;
+    align-items: flex-end;
   }
 
   /*
@@ -533,12 +581,15 @@ footer a {
   .logo,
   .inscription {
     order: -1;
-    padding-left: 10px;
     border: 1px solid black;
   }
   .inscription {
-    padding-left: 150px;
+    padding-left: 180px;
+    padding-right: 20px;
     text-align: right;
+  }
+  nav {
+    flex: 1;
   }
 
   /*
@@ -551,17 +602,7 @@ footer a {
   */
   .nav ul {
     padding: 20px 0px 20px 0px;
-    justify-content: left;
-    /* margin: auto;
-    width: auto; */
-  }
-
-  /* navigation: 
-   specific padding to fit specified spacing
-   when mobile grid
-  */
-  .nav a {
-    padding: 0px 35px 10px 35px;
+    justify-content: space-around;
   }
 
   /* navigation :
@@ -651,6 +692,7 @@ footer a {
   /* END BODY tablets*/
 
   /* BEGIN HEADER tablets*/
+ 
   /* END HEADER tablets*/
 
   /* BEGIN MAIN tablets*/
@@ -659,7 +701,7 @@ footer a {
   }
   #hebergementsville,
   #populaires {
-    margin: 0px;
+    margin: auto;
     flex: 1;
   }
   #titrepopulaire {
@@ -672,7 +714,7 @@ footer a {
   }
   #listepopulaires {
     border: 1px solid red;
-    align-items: center;
+    align-items: left;
   }
   .lpelement {
     display: flex;
@@ -681,7 +723,20 @@ footer a {
     min-width: 400px;
     height: 150px;
   }
+  .lpphoto,.lpphotopor{
+flex:1;
+  }
+  .lplegende{
+flex:1.2;
+padding: 10px 50px 10px 20px;
+  }
 
+.lpphotopor img {
+  height: 250px;
+  position: absolute;
+  top: -60px;
+  right: 0px;
+}
   /* ACTIVITES BEGIN */
 
   #listeactivites {
