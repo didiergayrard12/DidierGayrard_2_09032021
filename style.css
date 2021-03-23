@@ -74,6 +74,12 @@ flex unit width to 1
   flex: 1;
 }
 
+/* remove underline for inscription
+button*/
+.inscription a {
+  text-decoration: none;
+}
+
 /*navigation menu area
 flex width unit to 10 for large screens*/
 .nav {
