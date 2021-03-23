@@ -456,7 +456,7 @@ and aspect params
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 1);
   border-radius: 20px;
-  margin: auto;
+  margin: 0px 20px 0px 20px;
 }
 
 /*popular photos viewports:
@@ -502,7 +502,7 @@ flex ratio ajusted to fit the model
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 20px 0px 20px;
   text-align: left;
   flex: 1.5;
 }
@@ -537,7 +537,7 @@ screen width
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0px 0px 25px 0px;
 }
 
@@ -565,7 +565,7 @@ pictures and landscape pictures
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0px 0px 0px 15px;
+  margin: 0px 30px 0px 15px;
 }
 
 /* inside each items of activities
@@ -593,14 +593,14 @@ the picture will be overflow outside the viewports*/
   margin: 0px;
   width: 300px;
   height: 440px;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 .apayelement .aphoto {
   overflow: hidden;
   position: relative;
   margin: 0px;
   width: 300px;
-  border-radius: 25px 25px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 /* adapt picture to viewport for picture*/
@@ -615,7 +615,6 @@ the picture will be overflow outside the viewports*/
 #listeactivites h4 {
   margin: 10px 20px 10px 20px;
 }
-
 
 /* layout of activity pictures to bring diversity in height*/
 .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto {
@@ -633,14 +632,12 @@ the picture will be overflow outside the viewports*/
 
 /* adapt lansscape picture in viewports*/
 .apayelement .aphoto img {
-   width: 300px; 
-   position: absolute; 
+  width: 300px;
+  position: absolute;
 }
 .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto img {
   top: -100px;
 }
-
-
 
 #listeactivites a {
   text-decoration: none;
@@ -720,7 +717,7 @@ footer a {
   }
   .inscription {
     padding-right: 20px;
-    min-width: 180px;
+    min-width: 240px;
     text-align: right;
   }
 
@@ -770,15 +767,20 @@ footer a {
   to filter section
   to fit model */
   #filtrage {
-    align-items: center;
-    margin: 0px 0px 40px 0px;
+    margin: 0px 20px 40px 30px;
   }
   #filtres {
-    margin: 40px 0px 0px 0px;
+    margin: 40px 0px 20px 0px;
   }
+
+  /* adjust  aspect of lists to fit 
+  model*/
   #hebergementsville,
   #populaires {
     border-radius: 0px;
+  }
+  #hebergementsville {
+    background-color: white;
   }
 
   /* adapt min-width  of viewport
@@ -814,7 +816,11 @@ footer a {
   .helement:nth-child(4) img {
     top: -100px;
   }
-
+  /* Title for activity:
+   disposition to fit model*/
+  #titreactivites {
+    margin: 0px 0px 0px 20px;
+  }
   /* change direction for the 2 blocks 
   of first level*/
   #listeactivites {
@@ -889,7 +895,7 @@ footer a {
 }
 
 /* Tablet and Ipad breakpoint */
-@media all and (max-width: 1350px) {
+@media all and (max-width: 1024px) {
   /* BEGIN BODY tablets*/
   /* entire body:
   auto the width and 
@@ -917,19 +923,28 @@ footer a {
   #populaires {
     margin: 20px 0px 0px 0px;
   }
-  #listeactivites {
-    justify-content: center;
-  }
-  /*change justify of content 
-  add a margin between the 2 blocks*/
-  .actblock {
-    justify-content: flex-start;
-    margin: 0px 0px 20px 0px;
+  #listepopulaires {
+    margin-bottom: 20px;
   }
   /* END MAIN tablets*/
 
   /*remove margin for footer*/
   footer div {
     margin: auto;
+  }
+}
+@media all and (max-width: 1370px) {
+  /*adapt flex dispostion
+  */
+  #listeactivites {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /*change justify of content 
+  add a margin between the 2 blocks*/
+  .actblock {
+    justify-content: flex-start;
+    margin: 0px 0px 20px 0px;
   }
 }
