@@ -30,7 +30,24 @@ J'ai utilisé pour toutes les photos le folder 4_small
 
 NOTE: j'ai stocké dans des folders "*_thumb_*" des images adaptéees aux differents formats du layout mais je ne les ai pas encore utilisées
 
-Je prévois de faire une branche pour exploiter ces images
+Je prévois de faire une branche pour exploiter ces images.
+
+TESTS éffectués sur cette version:
+
+Firefox: parcours 
+https://didiergayrard12.github.io/DidierGayrard_2_09032021/index.html
+avec toutes largeurs et largeur maximum plus appui bouton fentre entiere et reduction
+
+Chrome:
+idem plus essai de diverses format de tablettes
+
+BUGS a FIXER et LIMITATIONS:
+1) probleme vu sur les deux : décalage a droite de la section Activités : FIXED
+2) pas de marges sur header avec logo et boutton s'inscrire : FIXED
+3) tablettes et smartphones: scroll possible de droite a gauche: A comprende si c'est une limitation
+
+
+
 
 
 

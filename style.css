@@ -23,7 +23,7 @@ body {
   font-weight: normal;
   font-style: normal;
   background-color: #ffffff;
-  margin:auto;
+  margin: auto;
   max-width: 1440px;
 }
 
@@ -69,7 +69,6 @@ use specifieied color
 flex unit width to 1
 */
 .inscription {
-  /* text-align: right; */
   color: #0065fc;
   flex: 1;
 }
@@ -174,7 +173,6 @@ display using flex in row, aligned center
   background-color: #0065fc;
   border-radius: 0px 20px 20px 0px;
   color: white;
-  /* margin: 0px; */
 }
 
 /*mobile search button aspect and visibility*/
@@ -240,14 +238,6 @@ to dispose in row and align center*/
   display: flex;
   align-items: center;
 }
-
-/*TO DECIDE IF NECESSARY*/
-/* h3,
-h2,
-#logochart {
-  padding: 0px;
-  margin: 0px;
-} */
 
 /* 
 background color of the 
@@ -333,7 +323,6 @@ model
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  /* min-height: 420px;  TODO:  DECIDE IF TO REMOVE */
   margin: 0px 20px 0px 20px;
 }
 
@@ -562,14 +551,14 @@ add a margin for spacing between portrait
 pictures and landscape pictures
  */
 .aporelement {
-  margin: 0px 20px 0px 0px;
+  margin: 0px 0px 0px 0px;
   height: 430px;
 }
 .apayelement {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0px 30px 0px 15px;
+  margin: 0px 0px 0px 20px;
 }
 
 /* inside each items of activities
@@ -696,8 +685,8 @@ the div "actblock" must be arrage in column */
   no more margins
   */
   #entirepage {
-    width: auto;
-    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
   /* END BODY mobiles*/
 
@@ -710,7 +699,7 @@ the div "actblock" must be arrage in column */
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
+    margin: 0px 0px 0px 0px;
   }
 
   /*
@@ -721,13 +710,36 @@ the div "actblock" must be arrage in column */
   .logo,
   .inscription {
     order: -1;
+    padding-left: 20px;
+    border: 1px solid black;
   }
   .inscription {
     padding-right: 20px;
-    min-width: 240px;
+    min-width: 200px;
     text-align: right;
   }
+  /*navigation menu area
+  flex width unit to 1 */
+  .nav {
+    flex: 1;
+  }
 
+  /*
+  remove li margin  
+  */
+  .nav li {
+    margin-right: 0px;
+  }
+
+  /*
+  navigation:
+  remove decoration
+  padding for good placement of border
+  indicating the mouse hover
+  */
+  .nav a {
+    padding: 0px 40px 0px 40px;
+  }
   /*
   navigation list:
   add padding to fit model grid
@@ -736,7 +748,7 @@ the div "actblock" must be arrage in column */
   */
   .nav ul {
     padding: 20px 0px 20px 0px;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   /* navigation :
@@ -776,7 +788,6 @@ the div "actblock" must be arrage in column */
   #filtrage {
     margin: 0px 20px 40px 30px;
   }
-  
 
   /* adjust  aspect of lists to fit 
   model*/
@@ -892,7 +903,6 @@ the div "actblock" must be arrage in column */
   */
   footer {
     flex-direction: column;
-    /* align-items: baseline; */
   }
   footer .foot {
     margin: 30px 0px 0px 50px;
@@ -907,7 +917,6 @@ the div "actblock" must be arrage in column */
   */
   #entirepage {
     width: auto;
-    margin: auto;
   }
   /* END BODY tablets*/
 
