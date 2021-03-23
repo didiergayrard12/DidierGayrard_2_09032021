@@ -16,12 +16,14 @@ used kit generation of font squirrel site
 /* 
 properties of body : 
 font and backgound color to white
-definition of max-width for large screens*/
+definition of max-width for large screens
+use margin auto to center when large screen*/
 body {
   font-family: "RalewayRegular", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
   background-color: #ffffff;
+  margin:auto;
   max-width: 1440px;
 }
 
@@ -30,11 +32,8 @@ entire page:
 Left and right margin to fit the model
 */
 #entirepage {
-  margin: auto;
-  /* margin-left: 50px;
+  margin-left: 50px;
   margin-right: 50px;
-*/
-  max-width: 1340px;
 }
 
 /*GENRAL DEFINITIONS END*/
@@ -136,7 +135,7 @@ in column using flex, items aligned left
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin: auto;
+  margin: 0px 0px 20px 0px;
 }
 
 /*
@@ -269,7 +268,6 @@ input button
 #hebergements {
   display: flex;
   justify-content: flex-start;
-  /* margin: 30px 0px 30px 0px; */
 }
 
 /* 
@@ -535,7 +533,7 @@ screen width
 */
 #listeactivites {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
   margin: 0px 0px 25px 0px;
@@ -772,9 +770,7 @@ the div "actblock" must be arrage in column */
   #filtrage {
     margin: 0px 20px 40px 30px;
   }
-  #filtres {
-    margin: 40px 0px 20px 0px;
-  }
+  
 
   /* adjust  aspect of lists to fit 
   model*/
@@ -913,6 +909,10 @@ the div "actblock" must be arrage in column */
   /* END HEADER tablets*/
 
   /* BEGIN MAIN tablets*/
+  #filtres {
+    margin: 20px 0px 20px 0px;
+  }
+
   /*reverse the flex direction to 
   column reverse to put popular ahaed*/
   #hebergements {
@@ -949,5 +949,8 @@ the div "actblock" must be arrage in column */
   .actblock {
     justify-content: flex-start;
     margin: 0px 0px 20px 0px;
+  }
+  footer div {
+    margin: 50px 50px 50px 50px;
   }
 }
