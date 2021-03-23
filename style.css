@@ -680,7 +680,10 @@ footer a {
 
 /* RECURSIVE PARAMS BEGIN */
 
-/* mobiles breakpoint : 500px */
+/* mobiles breakpoint : 700px 
+this value is choosen for adapt the layout 
+for a second time about activities
+the div "actblock" must be arrage in column */
 @media all and (max-width: 700px) {
   /* BEGIN BODY mobiles*/
   /* 
