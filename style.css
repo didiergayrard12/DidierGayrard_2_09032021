@@ -657,7 +657,6 @@ including background color
 and margin management
 */
 footer {
-  /* border: 1px solid black; */
   background-color: #f2f2f2;
   display: flex;
   justify-content: flex-start;
@@ -711,7 +710,6 @@ the div "actblock" must be arrage in column */
   .inscription {
     order: -1;
     padding-left: 20px;
-    border: 1px solid black;
   }
   .inscription {
     padding-right: 20px;
