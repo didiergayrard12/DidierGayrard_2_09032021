@@ -770,6 +770,7 @@ the div "actblock" must be arrage in column */
   #choixville #labelfield {
     order: 1;
     visibility: hidden;
+    position: absolute;
   }
   #choixville {
     position: relative;

@@ -44,7 +44,9 @@ idem plus essai de diverses format de tablettes
 BUGS a FIXER et LIMITATIONS:
 1) probleme vu sur les deux : décalage a droite de la section Activités : FIXED
 2) pas de marges sur header avec logo et boutton s'inscrire : FIXED
-3) tablettes et smartphones: scroll possible de droite a gauche: A comprende si c'est une limitation
+3) tablettes et smartphones: scroll possible de droite a gauche: A comprendre si c'est une limitation
+
+LIMITATION 3 FIXED: missing position:absolute on an hidden object was causing overflow
 
 
 
