@@ -1,3 +1,5 @@
+/* $primarycolor: #0065fc; */
+
 /* GENERAL DEFINITIONS BEGIN */
 /*
 definition of Releway Font:
@@ -13,6 +15,29 @@ used kit generation of font squirrel site
   font-style: normal;
 }
 
+:root {
+  --hard-blue:#0065fc;
+  --bg-color:#f2f2f2;
+  --main-bg-color:white;
+  --max-width-page:1440px;
+  --default-margin:50px;
+  --white-color: white;
+  --soft-blue:#deebff;
+  --black-color:black;
+  --hebergement-element-width:240px;
+  --hebergement-element-height:200px;
+  --popular-element-width:332px;
+  --popular-element-height:135px;
+  --popular-photo-width:130px;
+  --activity-portrait-height:430px;
+  --activity-portrait-photo-height:430px;
+  --activity-portrait-width:300px;
+  --mobile-layout-hebergement-element-width:320px;
+  --mobile-layout-hebergement-photo-width:350px;
+  --mobile-layout-activity-viewport-height:140px;
+  --mobile-layout-activity-photo-width:340px;
+  --mobile-layout-activity-photo-height:200px;
+}
 /* 
 properties of body : 
 font and backgound color to white
@@ -22,9 +47,9 @@ body {
   font-family: "RalewayRegular", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   margin: auto;
-  max-width: 1440px;
+  max-width: var(--max-width-page);
 }
 
 /* 
@@ -32,8 +57,8 @@ entire page:
 Left and right margin to fit the model
 */
 #entirepage {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: var(--default-margin);
+  margin-right: var(--default-margin);
 }
 
 /*GENRAL DEFINITIONS END*/
@@ -69,7 +94,7 @@ use specifieied color
 flex unit width to 1
 */
 .inscription {
-  color: #0065fc;
+  color: var(--hard-blue);
   flex: 1;
 }
 
@@ -124,8 +149,8 @@ color for hover action
 add a top border when hover
 */
 .nav a:hover {
-  color: #0065fc;
-  border-top: 3px solid #0065fc;
+  color: var(--hard-blue);
+  border-top: 3px solid var(--hard-blue);
 }
 
 /* HEADER END */
@@ -161,7 +186,7 @@ display using flex in row, aligned center
 /* icon localisation aspect*/
 #choixville #iconchoix {
   padding: 20px 25px 20px 20px;
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   border-radius: 20px 0px 0px 20px;
 }
 
@@ -170,9 +195,9 @@ display using flex in row, aligned center
   padding: 20px;
   font-size: 16px;
   font-weight: bolder;
-  background-color: #0065fc;
+  background-color: var(--hard-blue);
   border-radius: 0px 20px 20px 0px;
-  color: white;
+  color:var(--white-color);
 }
 
 /*mobile search button aspect and visibility*/
@@ -187,7 +212,7 @@ input[type="text"] {
   font-size: 16px;
   padding: 18px;
   font-weight: bold;
-  border: 1px solid #f2f2f2;
+  border: 1px solid var(--bg-color);
 }
 
 /*
@@ -209,7 +234,7 @@ including an icon + a text*/
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #deebff;
+  border: 2px solid var(--soft-blue);
   border-radius: 40px;
   margin: 12px;
 }
@@ -244,15 +269,15 @@ background color of the
 filter icons
 */
 .icon-background {
-  color: #deebff;
+  color: var(--soft-blue);
 }
 /* 
  colors of the 
 input button
 */
 .fa-search {
-  color: white;
-  background-color: #0065fc;
+  color: var(--white-color);
+  background-color: var(--hard-blue);
 }
 
 /*
@@ -278,7 +303,7 @@ town selection block from popular block
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   margin-right: 20px;
   border-radius: 20px;
 }
@@ -295,7 +320,7 @@ town selection block from popular block
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   margin-left: 20px;
   border-radius: 20px;
 }
@@ -348,10 +373,10 @@ margin for interspace beetween each items
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 240px;
-  height: 200px;
+  width: var(--hebergement-element-width);
+  height: var(--hebergement-element-height);
   text-align: center;
-  border: 5px solid white;
+  border: 5px solid var(--white-color);
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 1);
   border-radius: 20px;
@@ -369,7 +394,7 @@ radius to fit border design model
 .hphotopor {
   overflow: hidden;
   position: relative;
-  min-width: 240px;
+  min-width: var(--hebergement-element-width);
   flex: 3;
   margin: auto;
   border-radius: 15px 15px 0px 0px;
@@ -389,7 +414,7 @@ justify content and flex ratio with photo
 regarding viewport hphoto
 */
 .hphoto img {
-  width: 240px;
+  width: var(--hebergement-element-width);
   position: absolute;
   top: -20px;
   right: 0px;
@@ -397,7 +422,7 @@ regarding viewport hphoto
 /* portrait picture customization
 regarding viewport hphotopor*/
 .hphotopor img {
-  width: 240px;
+  width: var(--hebergement-element-width);
   position: absolute;
   top: -120px;
   right: 0px;
@@ -443,8 +468,8 @@ and aspect params
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 332px;
-  height: 135px;
+  width: var(--popular-element-width);
+  height: var(--popular-element-height);
   border: 5px solid white;
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 1);
@@ -462,8 +487,8 @@ ratio with legend and aspect
 .lpphotopor {
   position: relative;
   overflow: hidden;
-  height: 135px;
-  width: 130px;
+  height: var(--popular-element-height);
+  width: var(--popular-photo-width);
   flex: 1;
   border-radius: 15px 0px 0px 15px;
 }
@@ -509,7 +534,7 @@ for popular items*/
 
 /*respect grey color for rating*/
 .icon-color-less {
-  color: #f2f2f2;
+  color: var(--bg-color);
 }
 /*POPULAIRES END*/
 
@@ -552,7 +577,7 @@ pictures and landscape pictures
  */
 .aporelement {
   margin: 0px 0px 0px 0px;
-  height: 430px;
+  height: var(--activity-portrait-height);
 }
 .apayelement {
   display: flex;
@@ -571,7 +596,7 @@ manage aspect (shadow, border) */
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  border: 5px solid white;
+  border: 5px solid var(--white-color);
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
 }
@@ -584,21 +609,21 @@ the picture will be overflow outside the viewports*/
   overflow: hidden;
   position: relative;
   margin: 0px;
-  width: 300px;
-  height: 440px;
+  width: var(--activity-portrait-width);
+  height: var(--activity-portrait-height);
   border-radius: 20px 20px 0px 0px;
 }
 .apayelement .aphoto {
   overflow: hidden;
   position: relative;
   margin: 0px;
-  width: 300px;
+  width: var(--activity-portrait-width);
   border-radius: 20px 20px 0px 0px;
 }
 
 /* adapt picture to viewport for picture*/
 .aporelement .aphoto img {
-  height: 440px;
+  height: var(--activity-portrait-photo-height);
   position: absolute;
   top: 0px;
   right: -180px;
@@ -625,7 +650,7 @@ the picture will be overflow outside the viewports*/
 
 /* adapt lansscape picture in viewports*/
 .apayelement .aphoto img {
-  width: 300px;
+  width: var(--activity-portrait-width);
   position: absolute;
 }
 .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto img {
@@ -639,13 +664,13 @@ the picture will be overflow outside the viewports*/
 /*Color for icons*/
 i,
 #inscription {
-  color: #0065fc;
+  color: var(--hard-blue);
 }
 .icon-background2 {
-  color: #f2f2f2;
+  color: var(--bg-color);
 }
 #greystar .fa-star {
-  color: black;
+  color: var(--black-color);
 }
 
 /*END MAIN*/
@@ -657,7 +682,7 @@ including background color
 and margin management
 */
 footer {
-  background-color: #f2f2f2;
+  background-color: var(--bg-color);
   display: flex;
   justify-content: flex-start;
 }
@@ -666,6 +691,9 @@ footer div {
 }
 footer a {
   text-decoration: none;
+}
+footer a:visited{
+  color: black;
 }
 
 /* END FOOTER*/
@@ -754,7 +782,7 @@ the div "actblock" must be arrage in column */
    and no more at the top
   */
   .nav a:hover {
-    border-bottom: 3px solid #0065fc;
+    border-bottom: 3px solid var(--hard-blue);
     border-top: none;
   }
   /*END HEADER mobiles*/
@@ -795,29 +823,29 @@ the div "actblock" must be arrage in column */
     border-radius: 0px;
   }
   #hebergementsville {
-    background-color: white;
+    background-color: var(--white-color);
   }
 
   /* adapt min-width  of viewport
   for photos to model for mobiles */
   .helement {
-    min-width: 320px;
+    min-width: var(--mobile-layout-hebergement-element-width);
   }
   .hphoto,
   .hphotopor {
-    min-width: 320px;
+    min-width: var(--mobile-layout-hebergement-element-width);
   }
 
   /* adapt absolute position regarding new viewport
   for mobiles*/
   .hphoto img {
-    width: 350px;
+    width: var(--mobile-layout-hebergement-photo-width);
     position: absolute;
     top: -50px;
     right: -10px;
   }
   .hphotopor img {
-    width: 350px;
+    width: var(--mobile-layout-hebergement-photo-width);
     position: absolute;
     top: -200px;
     right: 0px;
@@ -866,16 +894,16 @@ the div "actblock" must be arrage in column */
   due to adaptation to the web large display pagination
   thsi cannot be factorized*/
   .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto {
-    height: 140px;
+    height: var(--mobile-layout-activity-viewport-height);
   }
   .actblock:nth-child(1) .apayelement div:nth-child(2) .aphoto {
-    height: 140px;
+    height: var(--mobile-layout-activity-viewport-height);
   }
   .actblock:nth-child(2) .apayelement div:nth-child(1) .aphoto {
-    height: 140px;
+    height: var(--mobile-layout-activity-viewport-height);
   }
   .actblock:nth-child(2) .apayelement div:nth-child(2) .aphoto {
-    height: 140px;
+    height: var(--mobile-layout-activity-viewport-height);
   }
 
   /* adapt picture to new viewport for lanscape pictures*/
@@ -887,8 +915,8 @@ the div "actblock" must be arrage in column */
   /* adapt picture to new viewport for portrait pictures
   to landscape viewport*/
   .aporelement .aphoto img {
-    width: 340px;
-    height: 200px;
+    width: var(--mobile-layout-activity-photo-width);
+    height: var(--mobile-layout-activity-photo-height);
     position: absolute;
     top: 0px;
     right: 0px;
