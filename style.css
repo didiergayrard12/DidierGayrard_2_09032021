@@ -16,27 +16,29 @@ used kit generation of font squirrel site
 }
 
 :root {
-  --hard-blue:#0065fc;
-  --bg-color:#f2f2f2;
-  --main-bg-color:white;
-  --max-width-page:1440px;
-  --default-margin:50px;
+  --hard-blue: #0065fc;
+  --bg-color: #f2f2f2;
+  --main-bg-color: white;
+  --max-width-page: 1440px;
+  --default-margin: 50px;
   --white-color: white;
-  --soft-blue:#deebff;
-  --black-color:black;
-  --hebergement-element-width:240px;
-  --hebergement-element-height:200px;
-  --popular-element-width:332px;
-  --popular-element-height:135px;
-  --popular-photo-width:130px;
-  --activity-portrait-height:430px;
-  --activity-portrait-photo-height:430px;
-  --activity-portrait-width:300px;
-  --mobile-layout-hebergement-element-width:320px;
-  --mobile-layout-hebergement-photo-width:350px;
-  --mobile-layout-activity-viewport-height:140px;
-  --mobile-layout-activity-photo-width:340px;
-  --mobile-layout-activity-photo-height:200px;
+  --soft-blue: #deebff;
+  --black-color: black;
+  --hebergement-element-width: 240px;
+  --hebergement-element-zoom-width: 300px;
+  --hebergement-element-height: 200px;
+  --popular-element-width: 332px;
+  --popular-element-height: 135px;
+  --popular-photo-width: 130px;
+  --activity-portrait-height: 400px;
+  --activity-portrait-photo-height: 440px;
+  --activity-portrait-width: 300px;
+  --mobile-layout-hebergement-element-width: 320px;
+  --mobile-layout-hebergement-photo-width: 350px;
+  --mobile-layout-activity-viewport-height: 140px;
+  --mobile-layout-activity-photo-width: 340px;
+  --mobile-layout-activity-zoom-width: 340px;
+  --mobile-layout-activity-photo-height: 200px;
 }
 /* 
 properties of body : 
@@ -197,7 +199,7 @@ display using flex in row, aligned center
   font-weight: bolder;
   background-color: var(--hard-blue);
   border-radius: 0px 20px 20px 0px;
-  color:var(--white-color);
+  color: var(--white-color);
 }
 
 /*mobile search button aspect and visibility*/
@@ -243,7 +245,13 @@ including an icon + a text*/
 is usied to build icons with background */
 #filtres span {
   padding: 0px;
-  margin: -1px 0px -1px -10px;
+  margin: -1px 0px -1px -9px;
+}
+
+/*Add hover effect when choose filtering*/
+#filtres li:hover {
+  color: var(--white-color);
+  background-color: var(--hard-blue);
 }
 
 /* tuning of the marging 
@@ -382,6 +390,18 @@ margin for interspace beetween each items
   border-radius: 20px;
   margin: 12px 12px 12px 12px;
 }
+#listehebergements a {
+  text-decoration: none;
+  border-radius: 25px;
+}
+#listehebergements a:hover {
+  color: var(--hard-blue);
+  box-shadow: 0px 0px 20px 1px rgba(0, 101, 252, 0.7);
+}
+.helement a:visited {
+  color: black;
+}
+
 /*element photo :
 2 type of photo :portrait and landscape
 hidden overflow to create a kind of viewport
@@ -474,7 +494,16 @@ and aspect params
   box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 1);
   border-radius: 20px;
+}
+
+#listepopulaires a {
+  text-decoration: none;
   margin: 0px 20px 0px 20px;
+  border-radius: 20px;
+}
+#listepopulaires a:hover {
+  color: var(--hard-blue);
+  box-shadow: 0px 0px 20px 1px rgba(0, 101, 252, 0.7);
 }
 
 /*popular photos viewports:
@@ -524,7 +553,9 @@ flex ratio ajusted to fit the model
   text-align: left;
   flex: 1.5;
 }
-
+.lplegende a {
+  text-decoration: none;
+}
 /* customize subtitle 
 for popular items*/
 .lplegende p {
@@ -556,7 +587,16 @@ screen width
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
+}
+#listeactivites a {
+  text-decoration: none;
+  border-radius: 25px;
   margin: 0px 0px 25px 0px;
+}
+#listeactivites a:hover .apaydiv,
+#listeactivites a:hover .aporelement {
+  color: var(--hard-blue);
+  box-shadow: 0px 0px 20px 1px rgba(0, 101, 252, 0.7);
 }
 
 /* inside block , use flex 
@@ -575,7 +615,7 @@ to set the 2 pictures in column
 add a margin for spacing between portrait
 pictures and landscape pictures
  */
-.aporelement {
+.aporelement a {
   margin: 0px 0px 0px 0px;
   height: var(--activity-portrait-height);
 }
@@ -591,7 +631,7 @@ manage the disposition for picture and legend
 using flex 
 manage aspect (shadow, border) */
 .aporelement,
-.apayelement div {
+.apaydiv {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -613,7 +653,7 @@ the picture will be overflow outside the viewports*/
   height: var(--activity-portrait-height);
   border-radius: 20px 20px 0px 0px;
 }
-.apayelement .aphoto {
+.apaydiv .aphoto {
   overflow: hidden;
   position: relative;
   margin: 0px;
@@ -622,12 +662,18 @@ the picture will be overflow outside the viewports*/
 }
 
 /* adapt picture to viewport for picture*/
-.aporelement .aphoto img {
+.aporelement img {
   height: var(--activity-portrait-photo-height);
   position: absolute;
   top: 0px;
   right: -180px;
 }
+/* .apaydiv  img {
+  border:1px solid black;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+} */
 
 /*position of the legend in activity item*/
 #listeactivites h4 {
@@ -635,25 +681,26 @@ the picture will be overflow outside the viewports*/
 }
 
 /* layout of activity pictures to bring diversity in height*/
-.actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto {
+.actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto {
   height: 180px;
 }
-.actblock:nth-child(1) .apayelement div:nth-child(2) .aphoto {
+.actblock:nth-child(1) .apayelement a:nth-child(2) .aphoto {
   height: 120px;
 }
-.actblock:nth-child(2) .apayelement div:nth-child(1) .aphoto {
+.actblock:nth-child(2) .apayelement a:nth-child(1) .aphoto {
   height: 150px;
 }
-.actblock:nth-child(2) .apayelement div:nth-child(2) .aphoto {
+.actblock:nth-child(2) .apayelement a:nth-child(2) .aphoto {
   height: 150px;
 }
 
 /* adapt lansscape picture in viewports*/
-.apayelement .aphoto img {
+.apaydiv .aphoto img {
   width: var(--activity-portrait-width);
   position: absolute;
+  top: 0px;
 }
-.actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto img {
+.actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto img {
   top: -100px;
 }
 
@@ -692,7 +739,7 @@ footer div {
 footer a {
   text-decoration: none;
 }
-footer a:visited{
+footer a:visited {
   color: black;
 }
 
@@ -866,7 +913,7 @@ the div "actblock" must be arrage in column */
   }
   /* change direction for the 2 blocks 
   of first level*/
-  #listeactivites {
+  #listeactivites a {
     flex-direction: column;
     justify-content: center;
     margin: 0px 0px 0px 0px;
@@ -890,24 +937,25 @@ the div "actblock" must be arrage in column */
   .apayelement {
     margin: 0px 0px 0px 0px;
   }
+
   /*unify height of activities pictures for mobile model
   due to adaptation to the web large display pagination
-  thsi cannot be factorized*/
-  .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto {
+  this cannot be factorized*/
+  .actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto {
     height: var(--mobile-layout-activity-viewport-height);
   }
-  .actblock:nth-child(1) .apayelement div:nth-child(2) .aphoto {
+  .actblock:nth-child(1) .apayelement a:nth-child(2) .aphoto {
     height: var(--mobile-layout-activity-viewport-height);
   }
-  .actblock:nth-child(2) .apayelement div:nth-child(1) .aphoto {
+  .actblock:nth-child(2) .apayelement a:nth-child(1) .aphoto {
     height: var(--mobile-layout-activity-viewport-height);
   }
-  .actblock:nth-child(2) .apayelement div:nth-child(2) .aphoto {
+  .actblock:nth-child(2) .apayelement a:nth-child(2) .aphoto {
     height: var(--mobile-layout-activity-viewport-height);
   }
 
   /* adapt picture to new viewport for lanscape pictures*/
-  .actblock:nth-child(1) .apayelement div:nth-child(1) .aphoto img {
+  .actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto img {
     position: absolute;
     top: -130px;
   }
