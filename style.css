@@ -1,5 +1,7 @@
 /* $primarycolor: #0065fc; */
 
+/*TOEXPLAIN :chapitres  poids  mecanisme  toggle*/
+
 /* GENERAL DEFINITIONS BEGIN */
 /*
 definition of Releway Font:
@@ -13,9 +15,11 @@ used kit generation of font squirrel site
     url("fonts/raleway.svg#Raleway") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-size: 16px;
 }
-
+/*TO EXPLAIN : chapitres couleur et dimensions les plus courantes rassemblees */
 :root {
+  /*Colors*/
   --hard-blue: #0065fc;
   --bg-color: #f2f2f2;
   --main-bg-color: white;
@@ -24,15 +28,19 @@ used kit generation of font squirrel site
   --white-color: white;
   --soft-blue: #deebff;
   --black-color: black;
+  /* hebergement sizes*/
   --hebergement-element-width: 240px;
   --hebergement-element-zoom-width: 300px;
   --hebergement-element-height: 200px;
+  /*popular size*/
   --popular-element-width: 332px;
   --popular-element-height: 135px;
   --popular-photo-width: 130px;
+  /* activity large size */
   --activity-portrait-height: 400px;
   --activity-portrait-photo-height: 440px;
   --activity-portrait-width: 300px;
+  /* mobile layout  */
   --mobile-layout-hebergement-element-width: 320px;
   --mobile-layout-hebergement-photo-width: 350px;
   --mobile-layout-activity-viewport-height: 140px;
@@ -58,6 +66,7 @@ body {
 entire page:  
 Left and right margin to fit the model
 */
+
 #entirepage {
   margin-left: var(--default-margin);
   margin-right: var(--default-margin);
@@ -195,13 +204,13 @@ display using flex in row, aligned center
 /* search button aspect*/
 #choixville #labelfield {
   padding: 20px;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bolder;
   background-color: var(--hard-blue);
   border-radius: 0px 20px 20px 0px;
   color: var(--white-color);
 }
-
+/*TO EXPLAIN : toggle */
 /*mobile search button aspect and visibility*/
 #choixville .fa {
   padding: 20px;
@@ -211,7 +220,7 @@ display using flex in row, aligned center
 
 /*input field aspect*/
 input[type="text"] {
-  font-size: 16px;
+  font-size: 1rem;
   padding: 18px;
   font-weight: bold;
   border: 1px solid var(--bg-color);
@@ -306,6 +315,7 @@ town selection , and 1 for popular
 a margin of 20px to separate 
 town selection block from popular block
 */
+/*TO EXPLAIN : poidsflex*/
 #hebergementsville {
   flex: 2.1;
   display: flex;
@@ -394,6 +404,7 @@ margin for interspace beetween each items
   text-decoration: none;
   border-radius: 25px;
 }
+
 #listehebergements a:hover {
   color: var(--hard-blue);
   box-shadow: 0px 0px 20px 1px rgba(0, 101, 252, 0.7);
@@ -410,6 +421,8 @@ regarding other displays
 flex param to weigth between photo and legend
 radius to fit border design model
 */
+/*TO EXPLAIN :mecanisme de viewport:
+ overflow , position relative et position absolue*/
 .hphoto,
 .hphotopor {
   overflow: hidden;
@@ -452,7 +465,7 @@ regarding viewport hphotopor*/
 .hlegende div,
 .lpnote {
   padding: 5px 0px 0px 0px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 /* adjustement of particular photo from viewport*/
@@ -559,7 +572,7 @@ flex ratio ajusted to fit the model
 /* customize subtitle 
 for popular items*/
 .lplegende p {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   line-height: 1em;
 }
 
@@ -679,7 +692,7 @@ the picture will be overflow outside the viewports*/
 #listeactivites h4 {
   margin: 10px 20px 10px 20px;
 }
-
+/*TO EXPLAIN :differntes hauteurs dans le cas large screen*/
 /* layout of activity pictures to bring diversity in height*/
 .actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto {
   height: 180px;
@@ -751,6 +764,7 @@ footer a:visited {
 this value is choosen for adapt the layout 
 for a second time about activities
 the div "actblock" must be arrage in column */
+/*TO EXPLAIN : changement pour les mobiles*/
 @media all and (max-width: 700px) {
   /* BEGIN BODY mobiles*/
   /* 
@@ -840,6 +854,7 @@ the div "actblock" must be arrage in column */
   hide and rend visible depending
   mobile model
   */
+  /*TO EXPLAIN :toggle*/
   #choixville #labelfield {
     order: 1;
     visibility: hidden;
@@ -984,6 +999,10 @@ the div "actblock" must be arrage in column */
   }
 }
 
+
+
+/*TO EXPLAIN :  break point "tablettes"
+Princialement populaires devant*/
 /* Tablet and Ipad breakpoint */
 @media all and (max-width: 1024px) {
   /* BEGIN BODY tablets*/
@@ -1026,6 +1045,7 @@ the div "actblock" must be arrage in column */
     margin: auto;
   }
 }
+/*TO EXPLAIN : chapitres media query*/
 @media all and (max-width: 1370px) {
   /*adapt flex dispostion
   */
