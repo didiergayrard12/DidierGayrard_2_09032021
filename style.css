@@ -446,19 +446,19 @@ justify content and flex ratio with photo
 /*landscape picture customization
 regarding viewport hphoto
 */
-.hphoto img {
+.hphoto img,  .hphotopor img{
   width: var(--hebergement-element-width);
   position: absolute;
-  top: -20px;
   right: 0px;
+}
+
+.hphoto img {
+  top: -30px;
 }
 /* portrait picture customization
 regarding viewport hphotopor*/
 .hphotopor img {
-  width: var(--hebergement-element-width);
-  position: absolute;
   top: -120px;
-  right: 0px;
 }
 
 /*légend inter line and font sizing*/
@@ -597,7 +597,7 @@ screen width
 */
 #listeactivites {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 }
@@ -658,20 +658,15 @@ manage aspect (shadow, border) */
 needed to fit the carious picture 
 portrait or landscape 
 the picture will be overflow outside the viewports*/
-.aporelement .aphoto {
+.aporelement .aphoto, .apaydiv .aphoto{
   overflow: hidden;
   position: relative;
   margin: 0px;
   width: var(--activity-portrait-width);
-  height: var(--activity-portrait-height);
   border-radius: 20px 20px 0px 0px;
 }
-.apaydiv .aphoto {
-  overflow: hidden;
-  position: relative;
-  margin: 0px;
-  width: var(--activity-portrait-width);
-  border-radius: 20px 20px 0px 0px;
+ .aporelement .aphoto {
+  height: var(--activity-portrait-height);
 }
 
 /* adapt picture to viewport for picture*/
@@ -900,27 +895,28 @@ the div "actblock" must be arrage in column */
 
   /* adapt absolute position regarding new viewport
   for mobiles*/
-  .hphoto img {
+  .hphoto img,  .hphotopor img {
     width: var(--mobile-layout-hebergement-photo-width);
     position: absolute;
+  }
+  .hphoto img {
     top: -50px;
     right: -10px;
   }
   .hphotopor img {
-    width: var(--mobile-layout-hebergement-photo-width);
-    position: absolute;
     top: -200px;
     right: 0px;
   }
 
-  /* adapt particular cases 
-  centering for pictures*/
-  .helement:nth-child(5) img {
-    top: -50px;
-  }
-  .helement:nth-child(4) img {
+  a:nth-child(4) .hphoto img {
     top: -100px;
   }
+  /* adapt particular cases 
+  centering for pictures*/
+  a:nth-child(5) .hphoto img {
+    top: -50px;
+  }
+
   /* Title for activity:
    disposition to fit model*/
   #titreactivites {
@@ -931,22 +927,27 @@ the div "actblock" must be arrage in column */
   #listeactivites a {
     flex-direction: column;
     justify-content: center;
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
+    /* margin: 0px 0px 0px 0px;
+    padding: 0px; */
   }
-  .apayelement div:nth-child(1) {
-    margin-bottom: 40px;
+  .apayelement a:nth-child(1) {
+    margin: 0px 0px 0px 0px;
   }
   /* change flex direction for mobile
   model and adapt margin between 
   blocks
   */
+
   .actblock {
     flex-direction: column;
     align-items: center;
+    margin: 0px 0px 0px 0px;
+  }
+  .apaydiv{
+    margin: 0px 10px 0px 10px;
   }
   .aporelement {
-    margin: 20px 0px 40px 0px;
+    margin: 20px 0px 0px 0px;
     height: 180px;
   }
   .apayelement {
@@ -1058,7 +1059,7 @@ Princialement populaires devant*/
   add a margin between the 2 blocks*/
   .actblock {
     justify-content: flex-start;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 0px 0px;
   }
   footer div {
     margin: 50px 50px 50px 50px;
