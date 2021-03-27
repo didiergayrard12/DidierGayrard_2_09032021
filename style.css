@@ -309,14 +309,14 @@ input button
 }
 
 /* 
-contains titrehebergements listehebergements afficherplus 
+contains hebergements__titre listehebergements afficherplus 
 disposion in column, the blocs have been weighted to 2 for 
 town selection , and 1 for popular 
 a margin of 20px to separate 
 town selection block from popular block
 */
 /*TO EXPLAIN : poidsflex*/
-#hebergementsville {
+#hebergements__ville {
   flex: 2.1;
   display: flex;
   flex-direction: column;
@@ -371,7 +371,7 @@ model
 
 /*margins for title and */
 #afficherplus,
-#titrehebergements {
+#hebergements__titre {
   margin: 20px 40px 0px 40px;
 }
 
@@ -387,7 +387,7 @@ with fixed dimensions
 aspect customization (border , shadown, background)
 margin for interspace beetween each items
 */
-.helement {
+.heberg__card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -409,7 +409,7 @@ margin for interspace beetween each items
   color: var(--hard-blue);
   box-shadow: 0px 0px 20px 1px rgba(0, 101, 252, 0.7);
 }
-.helement a:visited {
+.heberg__card a:visited {
   color: black;
 }
 
@@ -423,8 +423,8 @@ radius to fit border design model
 */
 /*TO EXPLAIN :mecanisme de viewport:
  overflow , position relative et position absolue*/
-.hphoto,
-.hphotopor {
+.heberg__cardphoto,
+.heberg__cardphotoportrait {
   overflow: hidden;
   position: relative;
   min-width: var(--hebergement-element-width);
@@ -437,39 +437,40 @@ radius to fit border design model
 legend: padding to fit model
 justify content and flex ratio with photo 
 */
-.hlegende {
+.heberg__cardlegend {
   padding: 10px 10px 10px 10px;
   text-align: left;
   flex: 1;
 }
 
 /*landscape picture customization
-regarding viewport hphoto
+regarding viewport heberg__cardphoto
 */
-.hphoto img,  .hphotopor img{
+.heberg__cardphoto img,
+.heberg__cardphotoportrait img {
   width: var(--hebergement-element-width);
   position: absolute;
   right: 0px;
 }
 
-.hphoto img {
+.heberg__cardphoto img {
   top: -30px;
 }
 /* portrait picture customization
-regarding viewport hphotopor*/
-.hphotopor img {
+regarding viewport heberg__cardphotoportrait*/
+.heberg__cardphotoportrait img {
   top: -120px;
 }
 
 /*légend inter line and font sizing*/
-.hlegende div,
-.lpnote {
+.heberg__cardlegend div,
+.populaire__note {
   padding: 5px 0px 0px 0px;
   font-size: 0.8rem;
 }
 
 /* adjustement of particular photo from viewport*/
-.helement:nth-child(4) img {
+.heberg__card:nth-child(4) img {
   top: -50px;
 }
 
@@ -497,7 +498,7 @@ align items to center
 dispostion using flex, fixed size, 
 and aspect params
 */
-.lpelement {
+.popularcard {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -525,8 +526,8 @@ the viewport . Fixed height and width of the viewport
 ratio with legend and aspect
 
 */
-.lpphoto,
-.lpphotopor {
+.popular__photoland,
+.popular__photoportrait {
   position: relative;
   overflow: hidden;
   height: var(--popular-element-height);
@@ -536,16 +537,16 @@ ratio with legend and aspect
 }
 
 /*  picture customization
-regarding viewport lpphoto*/
-.lpphoto img {
+regarding viewport popular__photoland*/
+.popular__photoland img {
   width: 220px;
   position: absolute;
   top: 0px;
   right: -50px;
 }
 /* portrait picture customization
-regarding viewport lpphotopor*/
-.lpphotopor img {
+regarding viewport popular__photoportrait*/
+.popular__photoportrait img {
   height: 200px;
   position: absolute;
   top: -30px;
@@ -557,7 +558,7 @@ disposition flex: column
 padding left and text alignto fit model
 flex ratio ajusted to fit the model
 */
-.lplegende {
+.popular__legend {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -566,12 +567,12 @@ flex ratio ajusted to fit the model
   text-align: left;
   flex: 1.5;
 }
-.lplegende a {
+.popular__legend a {
   text-decoration: none;
 }
 /* customize subtitle 
 for popular items*/
-.lplegende p {
+.popular__legend p {
   font-size: 0.8rem;
   line-height: 1em;
 }
@@ -606,8 +607,8 @@ screen width
   border-radius: 25px;
   margin: 0px 0px 25px 0px;
 }
-#listeactivites a:hover .apaydiv,
-#listeactivites a:hover .aporelement {
+#listeactivites a:hover .activity__cardpaysage,
+#listeactivites a:hover .activity__cardportrait {
   color: var(--hard-blue);
   box-shadow: 0px 0px 20px 1px rgba(0, 101, 252, 0.7);
 }
@@ -615,7 +616,7 @@ screen width
 /* inside block , use flex 
 to decompose two div: one for portrait picture
 other for landscape */
-.actblock {
+.activitesblock {
   display: flex;
   justify-content: space-around;
   margin: 0px 0px 0px 0px;
@@ -628,7 +629,7 @@ to set the 2 pictures in column
 add a margin for spacing between portrait
 pictures and landscape pictures
  */
-.aporelement a {
+.activity__cardportrait a {
   margin: 0px 0px 0px 0px;
   height: var(--activity-portrait-height);
 }
@@ -643,8 +644,8 @@ pictures and landscape pictures
 manage the disposition for picture and legend 
 using flex 
 manage aspect (shadow, border) */
-.aporelement,
-.apaydiv {
+.activity__cardportrait,
+.activity__cardpaysage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -658,25 +659,26 @@ manage aspect (shadow, border) */
 needed to fit the carious picture 
 portrait or landscape 
 the picture will be overflow outside the viewports*/
-.aporelement .aphoto, .apaydiv .aphoto{
+.activity__cardportrait .activity__photo,
+.activity__cardpaysage .activity__photo {
   overflow: hidden;
   position: relative;
   margin: 0px;
   width: var(--activity-portrait-width);
   border-radius: 20px 20px 0px 0px;
 }
- .aporelement .aphoto {
+.activity__cardportrait .activity__photo {
   height: var(--activity-portrait-height);
 }
 
 /* adapt picture to viewport for picture*/
-.aporelement img {
+.activity__cardportrait img {
   height: var(--activity-portrait-photo-height);
   position: absolute;
   top: 0px;
   right: -180px;
 }
-/* .apaydiv  img {
+/* .activity__cardpaysage  img {
   border:1px solid black;
   position: absolute;
   top: 0px;
@@ -689,28 +691,28 @@ the picture will be overflow outside the viewports*/
 }
 /*TO EXPLAIN :differntes hauteurs dans le cas large screen*/
 /* layout of activity pictures to bring diversity in height*/
-.actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto {
+
+.height--custo1 {
   height: 180px;
 }
-.actblock:nth-child(1) .apayelement a:nth-child(2) .aphoto {
+.height--custo2 {
   height: 120px;
 }
-.actblock:nth-child(2) .apayelement a:nth-child(1) .aphoto {
-  height: 150px;
-}
-.actblock:nth-child(2) .apayelement a:nth-child(2) .aphoto {
+.height--custo3 {
   height: 150px;
 }
 
 /* adapt lansscape picture in viewports*/
-.apaydiv .aphoto img {
+.activity__cardpaysage .activity__photo img {
   width: var(--activity-portrait-width);
   position: absolute;
   top: 0px;
 }
-.actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto img {
+ .activitesblock:nth-child(1) .apayelement a:nth-child(1) 
+.activity__photo img {
   top: -100px;
-}
+} 
+
 
 #listeactivites a {
   text-decoration: none;
@@ -758,7 +760,7 @@ footer a:visited {
 /* mobiles breakpoint : 700px 
 this value is choosen for adapt the layout 
 for a second time about activities
-the div "actblock" must be arrage in column */
+the div "activitesblock" must be arrage in column */
 /*TO EXPLAIN : changement pour les mobiles*/
 @media all and (max-width: 700px) {
   /* BEGIN BODY mobiles*/
@@ -875,45 +877,46 @@ the div "actblock" must be arrage in column */
 
   /* adjust  aspect of lists to fit 
   model*/
-  #hebergementsville,
+  #hebergements__ville,
   #populaires {
     border-radius: 0px;
   }
-  #hebergementsville {
+  #hebergements__ville {
     background-color: var(--white-color);
   }
 
   /* adapt min-width  of viewport
   for photos to model for mobiles */
-  .helement {
+  .heberg__card {
     min-width: var(--mobile-layout-hebergement-element-width);
   }
-  .hphoto,
-  .hphotopor {
+  .heberg__cardphoto,
+  .heberg__cardphotoportrait {
     min-width: var(--mobile-layout-hebergement-element-width);
   }
 
   /* adapt absolute position regarding new viewport
   for mobiles*/
-  .hphoto img,  .hphotopor img {
+  .heberg__cardphoto img,
+  .heberg__cardphotoportrait img {
     width: var(--mobile-layout-hebergement-photo-width);
     position: absolute;
   }
-  .hphoto img {
+  .heberg__cardphoto img {
     top: -50px;
     right: -10px;
   }
-  .hphotopor img {
+  .heberg__cardphotoportrait img {
     top: -200px;
     right: 0px;
   }
 
-  a:nth-child(4) .hphoto img {
+  a:nth-child(4) .heberg__cardphoto img {
     top: -100px;
   }
   /* adapt particular cases 
   centering for pictures*/
-  a:nth-child(5) .hphoto img {
+  a:nth-child(5) .heberg__cardphoto img {
     top: -50px;
   }
 
@@ -938,15 +941,15 @@ the div "actblock" must be arrage in column */
   blocks
   */
 
-  .actblock {
+  .activitesblock {
     flex-direction: column;
     align-items: center;
     margin: 0px 0px 0px 0px;
   }
-  .apaydiv{
+  .activity__cardpaysage {
     margin: 0px 10px 0px 10px;
   }
-  .aporelement {
+  .activity__cardportrait {
     margin: 20px 0px 0px 0px;
     height: 180px;
   }
@@ -957,28 +960,27 @@ the div "actblock" must be arrage in column */
   /*unify height of activities pictures for mobile model
   due to adaptation to the web large display pagination
   this cannot be factorized*/
-  .actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto {
-    height: var(--mobile-layout-activity-viewport-height);
-  }
-  .actblock:nth-child(1) .apayelement a:nth-child(2) .aphoto {
-    height: var(--mobile-layout-activity-viewport-height);
-  }
-  .actblock:nth-child(2) .apayelement a:nth-child(1) .aphoto {
-    height: var(--mobile-layout-activity-viewport-height);
-  }
-  .actblock:nth-child(2) .apayelement a:nth-child(2) .aphoto {
+
+  .height--custo1,
+  .height--custo2,
+  .height--custo3 {
     height: var(--mobile-layout-activity-viewport-height);
   }
 
   /* adapt picture to new viewport for lanscape pictures*/
-  .actblock:nth-child(1) .apayelement a:nth-child(1) .aphoto img {
+   .activitesblock:nth-child(1)
+    .apayelement
+    a:nth-child(1)
+    .activity__photo
+    img {
     position: absolute;
     top: -130px;
-  }
+  } 
+
 
   /* adapt picture to new viewport for portrait pictures
   to landscape viewport*/
-  .aporelement .aphoto img {
+  .activity__cardportrait .activity__photo img {
     width: var(--mobile-layout-activity-photo-width);
     height: var(--mobile-layout-activity-photo-height);
     position: absolute;
@@ -999,8 +1001,6 @@ the div "actblock" must be arrage in column */
     margin: 30px 0px 0px 50px;
   }
 }
-
-
 
 /*TO EXPLAIN :  break point "tablettes"
 Princialement populaires devant*/
@@ -1032,7 +1032,7 @@ Princialement populaires devant*/
   /* adjust margin when popular 
   and town selection  are placed in 
   column  */
-  #hebergementsville,
+  #hebergements__ville,
   #populaires {
     margin: 20px 0px 0px 0px;
   }
@@ -1057,7 +1057,7 @@ Princialement populaires devant*/
 
   /*change justify of content 
   add a margin between the 2 blocks*/
-  .actblock {
+  .activitesblock {
     justify-content: flex-start;
     margin: 0px 0px 0px 0px;
   }

@@ -11,11 +11,11 @@ Mes breapoints sont :
 
 1024 pixels qui est le breakpoint courant pour les tablettes
 
-700 pixels pour les formats smartphones, qui correspond aussi a la zone ou le div "actblock" n'a plus de place 
+700 pixels pour les formats smartphones, qui correspond aussi a la zone ou le div "activitesblock" n'a plus de place 
 on en profite donc pour tout mettre en mode colonne
 
 Les points notables du design:
-1) la section activités est découpée en div qui permettent de faire une mise en colonne a deux niveaux , un pour un element "actblock" au nombre de deux dans le layout qui vienent se mettre en coolonne au breakpoint 1370 , pendant que le reste est inchangé.
+1) la section activités est découpée en div qui permettent de faire une mise en colonne a deux niveaux , un pour un element "activitesblock" au nombre de deux dans le layout qui vienent se mettre en coolonne au breakpoint 1370 , pendant que le reste est inchangé.
 
 
 2) a 1024 pixels, c'est la liste des poulaires qui passe devant en colonne avec la liste des hébergements
@@ -24,7 +24,7 @@ Les points notables du design:
 
 4) j'ai choisi de ne pas faire de thumbnails pour ce layout
 J'utilise un concept de "viewport" entre la zone ou afficher la photo et la photo elle même
-la photo "img" est positionnée en absolute sur le viewport "aphoto" ou "hphoto" ou "hpphoto" ou "lpphoto" et ces dernieres "class" recoivent un param position:relative
+la photo "img" est positionnée en absolute sur le viewport "activity__photo" ou "heberg__cardphoto" ou "hpphoto" ou "popular__photoland" et ces dernieres "class" recoivent un param position:relative
 J'ai utilisé pour toutes les photos le folder 4_small
 
 
