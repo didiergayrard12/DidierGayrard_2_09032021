@@ -740,6 +740,7 @@ and margin management
 */
 footer {
   background-color: var(--bg-color);
+  color: var(--black-color);
   display: flex;
   justify-content: flex-start;
 }
